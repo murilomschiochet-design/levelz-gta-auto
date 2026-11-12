@@ -29,6 +29,7 @@ CRED = os.path.join(BASE, "credenciais")
 FUSO = ZoneInfo(os.environ.get("YT_FUSO", "Europe/Rome"))
 ESCOPOS = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
 CATEGORIA = "20"          # Gaming
+CANAL_ESPERADO = "levelz"  # trava: só sobe se o canal autorizado tiver esse nome
 
 
 def credenciais():
@@ -49,12 +50,15 @@ def login():
     if not os.path.exists(segredo):
         raise SystemExit("Falta credenciais\\client_secret.json (veja PASSO-A-PASSO-YOUTUBE.txt)")
     flow = InstalledAppFlow.from_client_secrets_file(segredo, ESCOPOS)
-    cred = flow.run_local_server(port=0, prompt="consent", access_type="offline")
+    cred = flow.run_local_server(port=0, prompt="select_account consent", access_type="offline")
     with open(os.path.join(CRED, "token.json"), "w", encoding="utf-8") as f:
         f.write(cred.to_json())
     canal = youtube(cred).channels().list(part="snippet", mine=True).execute()
     nomes = [c["snippet"]["title"] for c in canal.get("items", [])]
     print("Login ok. Canal autorizado:", ", ".join(nomes) or "(nenhum?)")
+    if not any(CANAL_ESPERADO in n.lower() for n in nomes):
+        os.remove(os.path.join(CRED, "token.json"))
+        print("ATENÇÃO: não é o canal Levelz IT — apaguei esse login. Faça de novo escolhendo o Levelz IT.")
 
 
 def segredos():
@@ -111,6 +115,9 @@ def subir_dia(dia, data_txt=None, teste=False):
     data = data_alvo(roteiro, data_txt)
     agora = dt.datetime.now(FUSO)
     yt = youtube()
+    nomes = [c["snippet"]["title"] for c in yt.channels().list(part="snippet", mine=True).execute().get("items", [])]
+    if not any(CANAL_ESPERADO in n.lower() for n in nomes):
+        raise SystemExit(f"Canal autorizado errado: {nomes}. Não subi nada.")
     itens = [(s["id"], os.path.join(pasta, f"{s['id']}.mp4"), s["titulo_yt"],
               (s.get("descricao", "") + "\n\n" + " ".join(s.get("hashtags", []))).strip(),
               [h.lstrip("#") for h in s.get("hashtags", [])], s["hora"]) for s in roteiro["shorts"]]
