@@ -1,0 +1,158 @@
+{
+ "dia": 1,
+ "shorts": [
+  {
+   "id": "01",
+   "hora": "08:00",
+   "tag": "Personaggi",
+   "titulo": "Chi è *Jason Duval*?",
+   "texto": "Cresciuto tra truffatori e piccoli criminali, **Jason** è passato dall'esercito alle **Leonida Keys**, dove lavora per i trafficanti locali. Vorrebbe solo una vita tranquilla... ma conoscere **Lucia** potrebbe cambiare tutto.",
+   "foto": "People/Jason Duval",
+   "titulo_yt": "Chi è davvero Jason Duval? 👀 #GTA6 #Shorts",
+   "descricao": "Jason Duval, uno dei due protagonisti di GTA 6, secondo la descrizione ufficiale di Rockstar.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#jasonduval",
+    "#gtavi",
+    "#videogiochi",
+    "#gaming"
+   ],
+   "fonte": "rockstargames.com/VI (personaggi)"
+  },
+  {
+   "id": "02",
+   "hora": "10:00",
+   "tag": "Trailer",
+   "titulo": "Il trailer uscito *in anticipo*",
+   "texto": "Il primo trailer di GTA 6 doveva uscire la mattina del **5 dicembre 2023**. Ma la sera prima è finito online in bassa qualità con un leak... e Rockstar l'ha pubblicato subito, circa **15 ore prima**. In sottofondo: **Love Is a Long Road** di **Tom Petty**.",
+   "foto": "Places/Vice City",
+   "titulo_yt": "Il trailer di GTA 6 è uscito prima per colpa di un leak 😱 #Shorts",
+   "descricao": "Il Trailer 1 di GTA 6 è stato pubblicato in anticipo dopo il leak del 4 dicembre 2023.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gta6trailer",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Rockstar Games / Wikipedia (Grand Theft Auto VI)"
+  },
+  {
+   "id": "03",
+   "hora": "12:00",
+   "tag": "Trailer",
+   "titulo": "Tutto *girato su PS5*",
+   "texto": "Il secondo trailer, uscito il **6 maggio 2025**, è stato catturato interamente dentro il gioco su **PlayStation 5**: un mix di gameplay e scene di intermezzo. La canzone? **Hot Together** delle **Pointer Sisters**.",
+   "foto": "People/Jason and Lucia",
+   "titulo_yt": "Il trailer 2 di GTA 6 è tutto in-game su PS5 🤯 #Shorts",
+   "descricao": "Rockstar ha confermato che il Trailer 2 di GTA 6 è stato catturato interamente in-game su PS5.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gta6trailer2",
+    "#ps5",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "Rockstar Newswire (Trailer 2, 6/5/2025)"
+  },
+  {
+   "id": "04",
+   "hora": "14:00",
+   "tag": "Mappa",
+   "titulo": "Le *Everglades* di GTA 6",
+   "texto": "Si chiama **Grassrivers** ed è la grande palude di Leonida, ispirata alle **Everglades** della Florida: acqua bassa, erba alta, airboat e alligatori. Nel primo trailer si vedono anche stormi di **fenicotteri**.",
+   "foto": "Places/Grassrivers",
+   "titulo_yt": "In GTA 6 ci sono le Everglades: ecco Grassrivers 🐊 #Shorts",
+   "descricao": "Grassrivers, la palude dello stato di Leonida in GTA 6.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#grassrivers",
+    "#leonida",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "rockstargames.com/VI (luoghi) + Trailer 1"
+  },
+  {
+   "id": "05",
+   "hora": "16:00",
+   "tag": "Mappa",
+   "titulo": "Le *Florida Keys* di GTA 6",
+   "texto": "Le **Leonida Keys** sono una catena di isole collegate da lunghi ponti sul mare, ispirate alle **Florida Keys**. È qui che vive **Jason**, ed è proprio da queste isole che si apre il secondo trailer.",
+   "foto": "Places/Leonida Keys",
+   "titulo_yt": "Le isole di GTA 6 sono un paradiso 🌴 #Shorts",
+   "descricao": "Leonida Keys, l'arcipelago di GTA 6 dove vive Jason Duval.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#leonidakeys",
+    "#leonida",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "rockstargames.com/VI (luoghi) + Trailer 2"
+  },
+  {
+   "id": "06",
+   "hora": "18:00",
+   "tag": "Personaggi",
+   "titulo": "Il re di *Vice City*",
+   "texto": "**Boobie Ike** è una leggenda locale: ha fatto soldi per strada e li ha investiti in immobili, in uno strip club, il **Jack of Hearts**, e in un'etichetta musicale, la **Only Raw Records**, insieme a **Dre'Quan Priest**.",
+   "foto": "People/Boobie Ike",
+   "titulo_yt": "Boobie Ike, il boss di Vice City in GTA 6 💰 #Shorts",
+   "descricao": "Boobie Ike, uno dei personaggi di GTA 6 presentati da Rockstar.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#boobieike",
+    "#vicecity",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "rockstargames.com/VI (personaggi)"
+  },
+  {
+   "id": "07",
+   "hora": "20:00",
+   "tag": "Uscita",
+   "titulo": "Rinviato *due volte*",
+   "texto": "GTA 6 doveva uscire nell'**autunno 2025**. Poi Rockstar l'ha spostato al **26 maggio 2026**... e infine al **19 novembre 2026**. Dopo tutta questa attesa, ormai ci siamo quasi.",
+   "foto": "People/Jason and Lucia",
+   "titulo_yt": "GTA 6 è stato rinviato DUE volte ⏳ #Shorts",
+   "descricao": "Tutte le date di uscita di GTA 6: autunno 2025, 26 maggio 2026, 19 novembre 2026.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gta6release",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Rockstar Newswire (rinvii di maggio e novembre 2025)"
+  },
+  {
+   "id": "08",
+   "hora": "22:00",
+   "tag": "Curiosità",
+   "titulo": "Il *Florida Man* in GTA 6",
+   "texto": "Nel primo trailer ci sono finti video dei social girati dagli abitanti di Leonida: risse, feste in strada, gente strana nelle stazioni di servizio. È la parodia dei famosi video virali del **Florida Man**.",
+   "foto": "Places/Vice City",
+   "titulo_yt": "GTA 6 prende in giro i video del Florida Man 😂 #Shorts",
+   "descricao": "I video stile social del Trailer 1 di GTA 6 sono una parodia dei virali del Florida Man.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#floridaman",
+    "#gtavi",
+    "#videogiochi",
+    "#gaming"
+   ],
+   "fonte": "Trailer 1 (5/12/2023)"
+  }
+ ],
+ "data": "2026-11-12"
+}

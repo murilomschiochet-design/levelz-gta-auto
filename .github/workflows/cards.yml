@@ -1,0 +1,91 @@
+# Quando a rotina do Claude manda um roteiro novo (roteiros/dia-XX.json), gera os cards e sobe AGENDADO no @LevelzIT.
+# À mão: Actions > "Cards - gerar e subir" > Run workflow (escolhendo o dia e se sobe ou não).
+name: Cards - gerar e subir
+
+on:
+  push:
+    branches: [main]
+    paths: ["roteiros/dia-*.json", ".github/workflows/cards.yml"]
+  workflow_dispatch:
+    inputs:
+      dia:
+        description: "Dia (ex.: dia-03). Vazio = o último roteiro"
+        required: false
+      subir:
+        description: "Subir no YouTube?"
+        type: choice
+        options: ["sim", "nao"]
+        default: "sim"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      PYTHONIOENCODING: utf-8
+      USAR_PLAYWRIGHT: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar ffmpeg e fontes
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji >/dev/null
+          mkdir -p ~/.fonts && cp modelo/fonts/*.ttf ~/.fonts/ && fc-cache -f >/dev/null
+      - name: Instalar bibliotecas
+        run: |
+          python -m pip install -q -r requirements.txt
+          python -m playwright install --with-deps chromium >/dev/null
+      - name: Qual dia
+        id: dia
+        run: |
+          DIA="${{ github.event.inputs.dia }}"
+          [ -z "$DIA" ] && DIA=$(ls roteiros/dia-*.json | sort -V | tail -1 | xargs basename | sed 's/.json//')
+          echo "dia=$DIA" >> "$GITHUB_OUTPUT"
+          echo "Dia: $DIA"
+      - name: Gerar cards
+        run: |
+          set -o pipefail
+          mkdir -p saida/${{ steps.dia.outputs.dia }}
+          python gerar.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-cards.txt
+          python folha_contato.py ${{ steps.dia.outputs.dia }}
+      - name: Subir no YouTube (agendado)
+        if: ${{ github.event.inputs.subir != 'nao' }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ -z "$YT_REFRESH_TOKEN" ]; then echo "Sem chave do YouTube ainda: pulei o upload."; exit 0; fi
+          set -o pipefail
+          python subir.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-subir.txt
+      - name: Guardar os videos pra conferir (3 dias)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.dia.outputs.dia }}
+          path: |
+            saida/${{ steps.dia.outputs.dia }}/*.mp4
+            saida/${{ steps.dia.outputs.dia }}/*.jpg
+            saida/${{ steps.dia.outputs.dia }}/painel.html
+          retention-days: 3
+      - name: Salvar registros
+        if: always()
+        run: |
+          git config user.name "levelz-bot"
+          git config user.email "levelz-bot@users.noreply.github.com"
+          git add saida uso-fotos.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "nada novo"; exit 0; }
+          git commit -q -m "cards ${{ steps.dia.outputs.dia }}: registros"
+          git pull --rebase -q
+          git push

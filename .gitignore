@@ -1,0 +1,7 @@
+# nunca vai pro GitHub
+credenciais/
+.venv/
+__pycache__/
+# saídas pesadas (geradas de novo todo dia)
+saida/**/*.mp4
+saida/**/_cards/
