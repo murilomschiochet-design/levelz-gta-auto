@@ -10,6 +10,3 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-12 | dia-01 | Personaggi | Boobie Ike, il re di Vice City | rockstargames.com/VI
 2026-11-12 | dia-01 | Uscita | Rinviato due volte | Rockstar
 2026-11-12 | dia-01 | Curiosità | Florida Man nel trailer | Trailer 1
-2026-11-13 | dia-02 | Personaggi | Brian Heder, il padrone di casa di Jason | rockstargames.com/VI
-2026-11-13 | dia-02 | Personaggi | Cal Hampton, l'amico che ascolta tutto | rockstargames.com/VI
-2026-11-13 | dia-02 | Personaggi | Raul Bautista, il rapinatore esperto | rockstargames.com/VI
