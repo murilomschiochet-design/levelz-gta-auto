@@ -5,3 +5,5 @@ __pycache__/
 # saídas pesadas (geradas de novo todo dia)
 saida/**/*.mp4
 saida/**/_cards/
+auditoria/
+.wrangler/
