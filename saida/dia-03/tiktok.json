@@ -2,31 +2,37 @@
  "01": {
   "publish_id": "v_inbox_file~v2.7707609648891545622",
   "legenda": "GTA 6 è GOLD: niente più rinvii! 🔥 #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "10:00"
+  "hora": "10:00",
+  "status": "SEND_TO_USER_INBOX"
  },
  "02": {
   "publish_id": "v_inbox_file~v2.7707609655266068502",
   "legenda": "Pre-load GTA 6: quanto spazio serve? 😱 #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "12:00"
+  "hora": "12:00",
+  "status": "SEND_TO_USER_INBOX"
  },
  "03": {
   "publish_id": "v_inbox_file~v2.7707609683792087043",
   "legenda": "GTA 6 su Xbox One? C'è un modo! ☁️ #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "14:00"
+  "hora": "14:00",
+  "status": "SEND_TO_USER_INBOX"
  },
  "04": {
   "publish_id": "v_inbox_file~v2.7707609711784331286",
   "legenda": "GTA 6 su console: solo 30 fps? 🎮 #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "16:00"
+  "hora": "16:00",
+  "status": "SEND_TO_USER_INBOX"
  },
  "05": {
   "publish_id": "v_inbox_file~v2.7707609738758227990",
   "legenda": "Il festival di GTA 6 a Miami con Travis Scott 🎤 #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "18:00"
+  "hora": "18:00",
+  "status": "PUBLISH_COMPLETE"
  },
  "06": {
   "publish_id": "v_inbox_file~v2.7707609759033214979",
   "legenda": "Rockstar, voto sul sindacato durante il lancio di GTA 6 #Shorts #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi",
-  "hora": "21:00"
+  "hora": "21:00",
+  "status": "SEND_TO_USER_INBOX"
  }
 }

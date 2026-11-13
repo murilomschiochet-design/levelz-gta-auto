@@ -5,11 +5,11 @@
  02 Il pre-load è *già qui*
     ok  (Artwork/Jason and Lucia 01/Jason_and_Lucia_01_landscape.jpg)
  03 GTA 6 su *Xbox One*
-    ok  (Places/Vice City/Vice_City_03.jpg)
+    ok  (Places/Vice City/Vice_City_04.jpg)
  04 Solo *30 fps* su console
     ok  (Artwork/Jason and Lucia Beach/Jason_and_Lucia_Beach_landscape.jpg)
  05 Festival a *Miami*
-    ok  (Places/Leonida Keys/Leonida_Keys_03.jpg)
+    ok  (Places/Leonida Keys/Leonida_Keys_04.jpg)
  06 Voto *sindacale* a Rockstar
-    ok  (Places/Port Gellhorn/Port_Gellhorn_03.jpg)
+    ok  (Places/Port Gellhorn/Port_Gellhorn_04.jpg)
  painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-03/painel.html
