@@ -169,7 +169,8 @@ def legenda(s):
         if h.lower() not in vistos:
             vistos.add(h.lower())
             tags.append(h)
-    return f"{s['titulo_yt']} {' '.join(tags)}".strip()[:2200]
+    titulo = " ".join(w for w in s["titulo_yt"].split() if w.lower() != "#shorts")   # #Shorts é só do YouTube
+    return f"{titulo} {' '.join(tags)}".strip()[:2200]
 
 
 def enviar_dia(dia):
