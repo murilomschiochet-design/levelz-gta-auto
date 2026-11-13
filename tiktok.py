@@ -162,6 +162,34 @@ def enviar_video(token, mp4):
     return d["publish_id"]
 
 
+def status(token, pid):
+    r = _req(f"{API}/post/publish/status/fetch/", cab={"Authorization": f"Bearer {token}",
+                                                        "Content-Type": "application/json; charset=UTF-8"},
+             corpo=json.dumps({"publish_id": pid}).encode(), metodo="POST")
+    return (r.get("data") or {}).get("status", "?"), (r.get("data") or {}).get("fail_reason", "")
+
+
+def conferir(token, reg, pasta, tentar_de_novo=True):
+    """Espera o TikTok processar (até ~8 min). O que travar em PROCESSING_UPLOAD é reenviado 1 vez."""
+    pend = {k: v for k, v in reg.items() if v.get("status") not in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE")}
+    for _ in range(16):
+        if not pend:
+            break
+        time.sleep(30)
+        for k in list(pend):
+            st, motivo = status(token, pend[k]["publish_id"])
+            reg[k]["status"] = st
+            if st != "PROCESSING_UPLOAD":
+                print(f" {k}: {st} {motivo}")
+                pend.pop(k)
+    for k in pend:
+        print(f" {k}: travado em PROCESSING_UPLOAD" + (" — reenviando" if tentar_de_novo else ""))
+        if tentar_de_novo:
+            reg[k]["publish_id"] = enviar_video(token, os.path.join(pasta, f"{k}.mp4"))
+            reg[k]["status"] = "reenviado"
+    return reg
+
+
 def legenda(s):
     extra = "#gta6 #gtavi #videogiochi".split()
     tags, vistos = [], set()
@@ -183,11 +211,16 @@ def enviar_dia(dia):
         mp4 = os.path.join(pasta, f"{s['id']}.mp4")
         if s["id"] in reg or not os.path.exists(mp4):
             continue
+        print(f" {s['id']}: {os.path.getsize(mp4)} bytes")
         pid = enviar_video(token, mp4)
         reg[s["id"]] = {"publish_id": pid, "legenda": legenda(s), "hora": s["hora"]}
         json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(f" {s['id']} na caixa de entrada do TikTok  ({s['hora']})  legenda: {legenda(s)}")
         time.sleep(3)
+    if any(v.get("status") is None for v in reg.values()):
+        reg = conferir(token, reg, pasta)
+        reg = conferir(token, reg, pasta, tentar_de_novo=False) if any(v.get("status") == "reenviado" for v in reg.values()) else reg
+        json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     with open(os.path.join(pasta, "legendas-tiktok.txt"), "w", encoding="utf-8") as f:
         f.write("LEGENDAS DO TIKTOK - " + dia + " (copie ao publicar cada rascunho)\n\n")
         for s in rot["shorts"]:
