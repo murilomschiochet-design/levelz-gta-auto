@@ -218,8 +218,7 @@ def enviar_dia(dia):
         print(f" {s['id']} na caixa de entrada do TikTok  ({s['hora']})  legenda: {legenda(s)}")
         time.sleep(3)
     if any(v.get("status") is None for v in reg.values()):
-        reg = conferir(token, reg, pasta)
-        reg = conferir(token, reg, pasta, tentar_de_novo=False) if any(v.get("status") == "reenviado" for v in reg.values()) else reg
+        reg = conferir(token, reg, pasta, tentar_de_novo=False)   # reenviar duplicava rascunhos e ativava o anti-spam
         json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     with open(os.path.join(pasta, "legendas-tiktok.txt"), "w", encoding="utf-8") as f:
         f.write("LEGENDAS DO TIKTOK - " + dia + " (copie ao publicar cada rascunho)\n\n")
