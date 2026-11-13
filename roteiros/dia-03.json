@@ -1,0 +1,114 @@
+{
+ "dia": 3,
+ "data": "2026-11-13",
+ "shorts": [
+  {
+   "id": "01",
+   "hora": "10:00",
+   "tag": "Novità",
+   "titulo": "GTA 6 è *Gold*",
+   "texto": "Il gioco è ufficialmente **gold**, cioè pronto per il lancio del **19 novembre**. Lo ha detto il CEO di Take-Two, **Strauss Zelnick**, e secondo Push Square non ci saranno altri rinvii.",
+   "foto": "Artwork/Official Cover Art",
+   "titulo_yt": "GTA 6 è GOLD: niente più rinvii! 🔥 #Shorts",
+   "descricao": "GTA 6 ha raggiunto la fase gold secondo Take-Two. Fonte: Push Square.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Push Square: pushsquare.com/news/2026/11/gta-6-wont-have-any-last-minute-delays-as-its-officially-gone-gold"
+  },
+  {
+   "id": "02",
+   "hora": "12:00",
+   "tag": "Ufficiale",
+   "titulo": "Il pre-load è *già qui*",
+   "texto": "Il pre-load di GTA 6 è partito dal **10 novembre**. Su PS5, secondo Push Square, il download pesa circa **212 GB**: libera spazio prima del **19 novembre**!",
+   "foto": "Artwork/Jason and Lucia 01",
+   "titulo_yt": "Pre-load GTA 6: quanto spazio serve? 😱 #Shorts",
+   "descricao": "Il pre-load di GTA 6 è attivo. Fonte: Push Square / Rockstar.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Push Square; Xbox Wire"
+  },
+  {
+   "id": "03",
+   "hora": "14:00",
+   "tag": "Novità",
+   "titulo": "GTA 6 su *Xbox One*",
+   "texto": "GTA 6 non uscirà in versione nativa su **Xbox One**, ma sarà giocabile via **Xbox Cloud Gaming** dalle **1:00 ET** del **19 novembre**. Va comprato a parte.",
+   "foto": "Places/Vice City",
+   "titulo_yt": "GTA 6 su Xbox One? C'è un modo! ☁️ #Shorts",
+   "descricao": "Annuncio di Xbox Wire: GTA 6 in streaming su Xbox One e Series X|S.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Xbox Wire, 10/11/2026: news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/"
+  },
+  {
+   "id": "04",
+   "hora": "16:00",
+   "tag": "Novità",
+   "titulo": "Solo *30 fps* su console",
+   "texto": "Secondo il co-director **Rob Nelson**, GTA 6 punta a **30 fps** su tutte le console, **PS5 Pro** compresa. Una modalità prestazioni non è stata promessa, riporta VGC.",
+   "foto": "Artwork/Jason and Lucia Beach",
+   "titulo_yt": "GTA 6 su console: solo 30 fps? 🎮 #Shorts",
+   "descricao": "Rockstar punta ai 30 fps su console. Fonte: VideoGamesChronicle.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "VGC: videogameschronicle.com/news/gta-6-is-confirmed-to-be-30-frames-per-second-at-launch-no-performance-mode-at-launch/"
+  },
+  {
+   "id": "05",
+   "hora": "18:00",
+   "tag": "Novità",
+   "titulo": "Festival a *Miami*",
+   "texto": "Rockstar e PlayStation organizzano **GTA VI: The Festival** il **21 novembre** al **Mana Wynwood** di Miami. Tra gli artisti: **Travis Scott**, **Cardi B** e **Metro Boomin**. Ingresso solo tramite lotteria.",
+   "foto": "Places/Leonida Keys",
+   "titulo_yt": "Il festival di GTA 6 a Miami con Travis Scott 🎤 #Shorts",
+   "descricao": "Evento musicale di lancio di GTA 6 a Miami. Fonte: The Fader / DJ Mag.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "The Fader: thefader.com/2026/11/09/gta-vi-festival-miami-lineup-tickets"
+  },
+  {
+   "id": "06",
+   "hora": "21:00",
+   "tag": "Novità",
+   "titulo": "Voto *sindacale* a Rockstar",
+   "texto": "Dal **12 al 26 novembre** i dipendenti Rockstar nel Regno Unito votano sul riconoscimento del sindacato **IWGB**. Il voto copre oltre **1.600** lavoratori, riporta Insider Gaming.",
+   "foto": "Places/Port Gellhorn",
+   "titulo_yt": "Rockstar, voto sul sindacato durante il lancio di GTA 6 #Shorts",
+   "descricao": "Voto sul riconoscimento sindacale in Rockstar UK. Fonte: Insider Gaming / PC Gamer.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "Insider Gaming: insider-gaming.com/rockstar-uk-union-vote-1600-workers/"
+  }
+ ]
+}
