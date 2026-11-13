@@ -70,6 +70,14 @@ jobs:
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "Sem chave do YouTube ainda: pulei o upload."; exit 0; fi
           set -o pipefail
           python subir.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-subir.txt
+      - name: Instagram (sobe os Reels sem publicar; publica na hora certa o workflow 3-instagram)
+        continue-on-error: true
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          if [ -z "$IG_TOKEN" ]; then echo "Sem chave do Instagram: pulei."; exit 0; fi
+          python instagram.py preparar ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-instagram.txt
       - name: TikTok (cards como rascunho)
         continue-on-error: true
         env:

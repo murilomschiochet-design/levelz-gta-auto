@@ -1,5 +1,22 @@
 {
   "_explicacao": "Cards por dia e horários (Roma). Até o Google aprovar a auditoria, a cota dá ~6 envios por dia. Depois do lançamento (19/11) o plano muda: 5 gameplay + 3 cards + 1 longo.",
   "cards_por_dia": 6,
-  "horas_cards": ["10:00", "12:00", "14:00", "16:00", "18:00", "21:00"]
+  "horas_cards": [
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00",
+    "21:00"
+  ],
+  "instagram": {
+    "conta_pc": "levelz",
+    "user_id": "17841438993146407",
+    "hashtags_extra": [
+      "#gta6",
+      "#gtavi",
+      "#videogiochi",
+      "#reels"
+    ]
+  }
 }
