@@ -3,3 +3,4 @@ playwright
 google-api-python-client
 google-auth-oauthlib
 tzdata
+cryptography

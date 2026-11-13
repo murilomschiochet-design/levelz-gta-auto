@@ -69,6 +69,24 @@ jobs:
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "Sem chave do YouTube ainda: pulei o upload."; exit 0; fi
           set -o pipefail
           python subir.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-subir.txt
+      - name: TikTok (cards como rascunho)
+        continue-on-error: true
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_CHAVE: ${{ secrets.TIKTOK_CHAVE }}
+        run: |
+          if [ -z "$TIKTOK_CHAVE" ]; then echo "Sem chave do TikTok: pulei."; exit 0; fi
+          python tiktok.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-tiktok.txt
+      - name: Pagina de legendas do TikTok (lz-legendas.pages.dev)
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 52b6bb474d2f430ceddd01ef2a1ccf32
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Sem token do Cloudflare: pulei a pagina."; exit 0; fi
+          python legendas_pagina.py ${{ steps.dia.outputs.dia }}
+          npx -y wrangler@4 pages deploy site-legendas --project-name lz-legendas --branch main --commit-dirty=true
       - name: Guardar os videos pra conferir (3 dias)
         if: always()
         uses: actions/upload-artifact@v4
@@ -84,7 +102,7 @@ jobs:
         run: |
           git config user.name "levelz-bot"
           git config user.email "levelz-bot@users.noreply.github.com"
-          git add saida uso-fotos.json 2>/dev/null || true
+          git add saida uso-fotos.json tiktok_token.enc 2>/dev/null || true
           git diff --cached --quiet && { echo "nada novo"; exit 0; }
           git commit -q -m "cards ${{ steps.dia.outputs.dia }}: registros"
           git pull --rebase -q
