@@ -1,6 +1,6 @@
 """Página pro celular com as legendas do TikTok (botão copiar), publicada em lz-legendas.pages.dev.
 
-Uso: python legendas_pagina.py dia-XX   -> gera site-legendas/index.html (dia mais recente + 2 anteriores)
+Uso: python legendas_pagina.py dia-XX   -> gera site-legendas/index.html (só o dia: os cards de hoje; o que você copia some depois de alguns segundos)
 O workflow publica a pasta com: npx wrangler pages deploy site-legendas --project-name lz-legendas
 """
 import glob
@@ -29,7 +29,7 @@ def bloco(dia):
     itens = []
     for s in rot["shorts"]:
         txt = legenda(s)
-        itens.append(f"""<article><div class="topo"><b>{html.escape(s['hora'])}</b><span>#{s['id']}</span></div>
+        itens.append(f"""<article data-k="{dia}-{s['id']}"><div class="topo"><b>{html.escape(s['hora'])}</b><span>#{s['id']}</span></div>
 <p>{html.escape(txt)}</p><button data-t="{html.escape(txt, quote=True)}">Copiar legenda</button></article>""")
     return f"<section><h2>{html.escape(rot.get('data', dia))} · {dia}</h2>{''.join(itens)}</section>"
 
@@ -39,7 +39,7 @@ def main():
                   key=lambda d: int(d.split("-")[1]))
     if len(sys.argv) > 1 and sys.argv[1] in dias:
         dias = dias[:dias.index(sys.argv[1]) + 1]
-    secoes = "".join(bloco(d) for d in reversed(dias[-3:]))
+    secoes = bloco(dias[-1])
     pagina = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Legendas TikTok — Levelz IT</title>
@@ -48,21 +48,38 @@ def main():
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,sans-serif;padding:16px}}
 h1{{font-size:20px;margin:0 0 4px}}.sub{{color:var(--mut);margin:0 0 18px;font-size:14px}}
 h2{{font-size:15px;color:var(--ac);margin:22px 0 10px;text-transform:uppercase;letter-spacing:.05em}}
-article{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 12px}}
+article{{transition:opacity .6s,transform .6s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 12px}}
 .topo{{display:flex;justify-content:space-between;color:var(--mut);font-size:14px}}.topo b{{color:var(--tx);font-size:17px}}
 p{{margin:8px 0 10px;font-size:15px;word-break:break-word}}
 button{{width:100%;padding:14px;border:0;border-radius:10px;background:var(--ac);color:#0a0f0c;font:700 16px system-ui}}
 button.ok{{background:#2ea043;color:#fff}}
+article.saindo{{opacity:0;transform:translateX(40px)}}
+.vazio{{display:none;text-align:center;color:var(--mut);padding:40px 10px;font-size:17px}}
+.rodape{{text-align:center;margin-top:18px}}.rodape a{{color:var(--mut);font-size:13px}}
 </style></head><body>
-<h1>Legendas do TikTok</h1><p class="sub">Abra o rascunho no TikTok, toque em copiar aqui e cole na legenda.</p>
+<h1>Legendas do TikTok</h1><p class="sub">Abra o rascunho no TikTok, toque em copiar aqui e cole na legenda. O que você copia sai da lista em alguns segundos.</p>
 {secoes}
+<div class="vazio" id="vazio">✅ Tudo postado hoje.<br>Os de amanhã aparecem aqui quando o robô terminar.</div>
+<p class="rodape"><a href="#" id="mostrar">Mostrar de novo os que já copiei</a></p>
 <script>
+const CH = 'legendas-feitas';
+let feitas = []; try {{ feitas = JSON.parse(localStorage.getItem(CH) || '[]'); }} catch (e) {{}}
+const salvar = () => {{ try {{ localStorage.setItem(CH, JSON.stringify(feitas.slice(-60))); }} catch (e) {{}} }};
+const conferir = () => {{ const v = [...document.querySelectorAll('article')].some(a => a.style.display !== 'none');
+  document.getElementById('vazio').style.display = v ? 'none' : 'block'; }};
+document.querySelectorAll('article').forEach(a => {{ if (feitas.includes(a.dataset.k)) a.style.display = 'none'; }});
+conferir();
 document.querySelectorAll('button[data-t]').forEach(b => b.onclick = async () => {{
   try {{ await navigator.clipboard.writeText(b.dataset.t); }} catch (e) {{
     const t = document.createElement('textarea'); t.value = b.dataset.t; document.body.appendChild(t); t.select();
     document.execCommand('copy'); t.remove(); }}
-  b.textContent = 'Copiada ✓'; b.classList.add('ok');
+  b.textContent = 'Copiada ✓ (sai da lista em 5 s)'; b.classList.add('ok');
+  const a = b.closest('article'); if (!feitas.includes(a.dataset.k)) {{ feitas.push(a.dataset.k); salvar(); }}
+  setTimeout(() => {{ a.classList.add('saindo'); setTimeout(() => {{ a.style.display = 'none'; conferir(); }}, 650); }}, 5000);
 }});
+document.getElementById('mostrar').onclick = e => {{ e.preventDefault(); feitas = []; salvar();
+  document.querySelectorAll('article').forEach(a => {{ a.style.display = ''; a.classList.remove('saindo');
+    const b = a.querySelector('button'); b.textContent = 'Copiar legenda'; b.classList.remove('ok'); }}); conferir(); }};
 </script></body></html>"""
     os.makedirs(SAIDA, exist_ok=True)
     with open(os.path.join(SAIDA, "index.html"), "w", encoding="utf-8") as f:
