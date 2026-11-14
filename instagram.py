@@ -69,10 +69,13 @@ def legenda(s):
     return f"{titulo}\n\n{desc}\n\n{' '.join(tags[:25])}".strip()[:2200]
 
 
-def subir(tok, uid, mp4, texto):
-    """Cria o container de Reel e manda o arquivo (upload resumível). Devolve o id do container."""
-    c = api("POST", f"{uid}/media", tok, media_type="REELS", upload_type="resumable", caption=texto,
-            share_to_feed="true")
+def subir(tok, uid, mp4, texto, story=False):
+    """Cria o container (Reel ou story) e manda o arquivo (upload resumível). Devolve o id do container."""
+    if story:
+        c = api("POST", f"{uid}/media", tok, media_type="STORIES", upload_type="resumable")
+    else:
+        c = api("POST", f"{uid}/media", tok, media_type="REELS", upload_type="resumable", caption=texto,
+                share_to_feed="true")
     tam = os.path.getsize(mp4)
     req = urllib.request.Request(c["uri"], data=open(mp4, "rb").read(), method="POST",
                                  headers=dict(UA, Authorization=f"OAuth {tok}", offset="0", file_size=str(tam)))
@@ -101,7 +104,21 @@ def preparar(dia):
     reg_arq = os.path.join(pasta, "instagram.json")
     reg = json.load(open(reg_arq, encoding="utf-8")) if os.path.exists(reg_arq) else {}
     data = rot.get("data") or dt.datetime.now(FUSO).date().isoformat()
+    n = len(rot["shorts"])
+    com_story = {rot["shorts"][i]["id"] for i in sorted({0, n // 2, n - 1}) if n} if CONFIG.get("stories", True) else set()
     for s in rot["shorts"]:
+        sk = f"story-{s['id']}"
+        mp4 = os.path.join(pasta, f"{s['id']}.mp4")
+        if s["id"] in com_story and sk not in reg and os.path.exists(mp4):
+            try:
+                cid = subir(tok, uid, mp4, "", story=True)
+                st = esperar(tok, cid)
+                quando = dt.datetime.combine(dt.date.fromisoformat(data), dt.time(*map(int, s["hora"].split(":"))), FUSO) + dt.timedelta(minutes=5)
+                reg[sk] = {"container": cid, "status": st, "publicar": quando.isoformat(), "publicado": None}
+                json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+                print(f" {sk}: preparado ({st}), publica {quando:%d/%m %H:%M}")
+            except Exception as e:
+                print(f" {sk}: erro ao subir: {e}")
         mp4 = os.path.join(pasta, f"{s['id']}.mp4")
         if s["id"] in reg or not os.path.exists(mp4):
             continue
