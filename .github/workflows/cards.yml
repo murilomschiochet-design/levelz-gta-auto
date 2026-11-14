@@ -1,6 +1,6 @@
 # Quando a rotina do Claude manda um roteiro novo (roteiros/dia-XX.json), gera os cards e sobe AGENDADO no @LevelzIT.
 # À mão: Actions > "Cards - gerar e subir" > Run workflow (escolhendo o dia e se sobe ou não).
-# TikTok + legendas: secrets TIKTOK_* e CLOUDFLARE_API_TOKEN. TikTok: no maximo 5 rascunhos por dia (limite do TikTok). 
+# Legendas + videos pro TikTok: pagina lz-legendas (CLOUDFLARE_API_TOKEN). TikTok pela API desligado (atrasava e duplicava).
 name: Cards - gerar e subir
 
 on:
@@ -85,6 +85,8 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_CHAVE: ${{ secrets.TIKTOK_CHAVE }}
         run: |
+          # desligado em 14/11: na conta do Levelz a caixa de entrada atrasava horas e duplicava. Os vídeos vão na página lz-legendas (botão Enviar pro TikTok).
+          if [ "${{ vars.TIKTOK_API_LEVELZ }}" != "1" ]; then echo "TikTok pela API desligado: use a pagina lz-legendas."; exit 0; fi
           if [ -z "$TIKTOK_CHAVE" ]; then echo "Sem chave do TikTok: pulei."; exit 0; fi
           python tiktok.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-tiktok.txt
       - name: Pagina de legendas do TikTok (lz-legendas.pages.dev)

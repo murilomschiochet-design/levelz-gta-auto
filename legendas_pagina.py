@@ -7,6 +7,7 @@ import glob
 import html
 import json
 import os
+import shutil
 import sys
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -27,10 +28,19 @@ def legenda(s):
 def bloco(dia):
     rot = json.load(open(os.path.join(BASE, "roteiros", f"{dia}.json"), encoding="utf-8"))
     itens = []
+    os.makedirs(os.path.join(SAIDA, "v"), exist_ok=True)
     for s in rot["shorts"]:
         txt = legenda(s)
+        mp4 = os.path.join(BASE, "saida", dia, f"{s['id']}.mp4")
+        video = ""
+        if os.path.exists(mp4):   # o vídeo vai junto: você baixa/compartilha direto pro TikTok (a caixa de entrada da API atrasava e duplicava)
+            nome = f"v/{dia}-{s['id']}.mp4"
+            shutil.copy(mp4, os.path.join(SAIDA, nome))
+            video = (f'<video src="{nome}" controls playsinline preload="metadata"></video>'
+                     f'<button class="env" data-v="{nome}" data-t="{html.escape(txt, quote=True)}">Enviar pro TikTok</button>'
+                     f'<a class="baixar" href="{nome}" download="levelz-{dia}-{s["id"]}.mp4">Baixar o vídeo</a>')
         itens.append(f"""<article data-k="{dia}-{s['id']}"><div class="topo"><b>{html.escape(s['hora'])}</b><span>#{s['id']}</span></div>
-<p>{html.escape(txt)}</p><button data-t="{html.escape(txt, quote=True)}">Copiar legenda</button></article>""")
+{video}<p>{html.escape(txt)}</p><button class="leg" data-t="{html.escape(txt, quote=True)}">Copiar legenda</button></article>""")
     return f"<section><h2>{html.escape(rot.get('data', dia))} · {dia}</h2>{''.join(itens)}</section>"
 
 
@@ -39,6 +49,7 @@ def main():
                   key=lambda d: int(d.split("-")[1]))
     if len(sys.argv) > 1 and sys.argv[1] in dias:
         dias = dias[:dias.index(sys.argv[1]) + 1]
+    shutil.rmtree(os.path.join(SAIDA, "v"), ignore_errors=True)
     secoes = bloco(dias[-1])
     pagina = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
@@ -53,11 +64,15 @@ article{{transition:opacity .6s,transform .6s;background:var(--card);border:1px 
 p{{margin:8px 0 10px;font-size:15px;word-break:break-word}}
 button{{width:100%;padding:14px;border:0;border-radius:10px;background:var(--ac);color:#0a0f0c;font:700 16px system-ui}}
 button.ok{{background:#2ea043;color:#fff}}
+video{{width:100%;max-height:60vh;border-radius:10px;background:#000;margin:10px 0 8px;display:block}}
+button.env{{background:linear-gradient(90deg,#ff4fa3,#ff8a3d);color:#fff;margin-bottom:6px}}
+button.leg{{background:transparent;color:var(--ac);border:2px solid var(--ac)}}
+a.baixar{{display:block;text-align:center;color:var(--mut);font-size:14px;margin:4px 0 6px}}
 article.saindo{{opacity:0;transform:translateX(40px)}}
 .vazio{{display:none;text-align:center;color:var(--mut);padding:40px 10px;font-size:17px}}
 .rodape{{text-align:center;margin-top:18px}}.rodape a{{color:var(--mut);font-size:13px}}
 </style></head><body>
-<h1>Legendas do TikTok</h1><p class="sub">Abra o rascunho no TikTok, toque em copiar aqui e cole na legenda. O que você copia sai da lista em alguns segundos.</p>
+<h1>Legendas do TikTok</h1><p class="sub">Toque em <b>Enviar pro TikTok</b>: a legenda já vai copiada e abre o compartilhar, aí escolha o TikTok e cole a legenda. (Ou baixe o vídeo e poste pelo app.) O que você copia sai da lista em alguns segundos.</p>
 {secoes}
 <div class="vazio" id="vazio">✅ Tudo postado hoje.<br>Os de amanhã aparecem aqui quando o robô terminar.</div>
 <p class="rodape"><a href="#" id="mostrar">Mostrar de novo os que já copiei</a></p>
@@ -69,7 +84,19 @@ const conferir = () => {{ const v = [...document.querySelectorAll('article')].so
   document.getElementById('vazio').style.display = v ? 'none' : 'block'; }};
 document.querySelectorAll('article').forEach(a => {{ if (feitas.includes(a.dataset.k)) a.style.display = 'none'; }});
 conferir();
-document.querySelectorAll('button[data-t]').forEach(b => b.onclick = async () => {{
+async function copiar(t) {{ try {{ await navigator.clipboard.writeText(t); }} catch (e) {{
+    const x = document.createElement('textarea'); x.value = t; document.body.appendChild(x); x.select(); document.execCommand('copy'); x.remove(); }} }}
+document.querySelectorAll('button.env').forEach(b => b.onclick = async () => {{
+  await copiar(b.dataset.t); const txt0 = b.textContent; b.textContent = 'Preparando…';
+  try {{
+    const blob = await (await fetch(b.dataset.v)).blob();
+    const f = new File([blob], b.dataset.v.split('/').pop(), {{ type: 'video/mp4' }});
+    if (navigator.canShare && navigator.canShare({{ files: [f] }})) {{ await navigator.share({{ files: [f] }}); }}
+    else {{ const a = document.createElement('a'); a.href = b.dataset.v; a.download = f.name; a.click(); }}
+  }} catch (e) {{}}
+  b.textContent = 'Legenda copiada ✓ (cole no TikTok)';
+}});
+document.querySelectorAll('button.leg').forEach(b => b.onclick = async () => {{
   try {{ await navigator.clipboard.writeText(b.dataset.t); }} catch (e) {{
     const t = document.createElement('textarea'); t.value = b.dataset.t; document.body.appendChild(t); t.select();
     document.execCommand('copy'); t.remove(); }}
@@ -79,7 +106,7 @@ document.querySelectorAll('button[data-t]').forEach(b => b.onclick = async () =>
 }});
 document.getElementById('mostrar').onclick = e => {{ e.preventDefault(); feitas = []; salvar();
   document.querySelectorAll('article').forEach(a => {{ a.style.display = ''; a.classList.remove('saindo');
-    const b = a.querySelector('button'); b.textContent = 'Copiar legenda'; b.classList.remove('ok'); }}); conferir(); }};
+    const b = a.querySelector('button.leg'); b.textContent = 'Copiar legenda'; b.classList.remove('ok'); }}); conferir(); }};
 </script></body></html>"""
     os.makedirs(SAIDA, exist_ok=True)
     with open(os.path.join(SAIDA, "index.html"), "w", encoding="utf-8") as f:
