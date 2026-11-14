@@ -1,10 +1,9 @@
-# 3) De hora em hora (09:04–21:04 Roma no inverno): publica no Instagram os Reels já preparados cujo horário chegou.
+# 3) A cada 15 min (08:00–21:45 Roma no inverno; o GitHub às vezes atrasa): publica no Instagram os Reels já preparados cujo horário chegou.
 name: 3 - Instagram (publicar na hora)
 
 on:
   schedule:
-    - cron: "4 8-20 * * *"
-    - cron: "34 8-20 * * *"
+    - cron: "*/15 7-20 * * *"
   workflow_dispatch:
 
 permissions:
