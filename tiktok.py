@@ -36,6 +36,7 @@ TOKEN_NUVEM = os.path.join(BASE, "tiktok_token.enc")
 REDIRECT = "https://area-pequena-fc.pages.dev/tiktok-callback.html"
 ESCOPOS = "user.info.basic,video.upload"
 API = "https://open.tiktokapis.com/v2"
+MAX_RASCUNHOS = 5
 UA = {"User-Agent": "AreaPequenaShorts/1.0"}
 
 
@@ -207,12 +208,19 @@ def enviar_dia(dia):
     reg_arq = os.path.join(pasta, "tiktok.json")
     reg = json.load(open(reg_arq, encoding="utf-8")) if os.path.exists(reg_arq) else {}
     token = token_valido()
-    for s in rot["shorts"]:
+    # o TikTok aceita no máximo 5 rascunhos pendentes (não publicados) por conta em 24 h: manda os 5 primeiros
+    for s in rot["shorts"][:MAX_RASCUNHOS]:
         mp4 = os.path.join(pasta, f"{s['id']}.mp4")
         if s["id"] in reg or not os.path.exists(mp4):
             continue
         print(f" {s['id']}: {os.path.getsize(mp4)} bytes")
-        pid = enviar_video(token, mp4)
+        try:
+            pid = enviar_video(token, mp4)
+        except SystemExit as e:
+            if "spam_risk" in str(e):
+                print(" TikTok recusou: rascunhos demais pendentes na caixa de entrada (publique ou apague os antigos). Parei.")
+                break
+            raise
         reg[s["id"]] = {"publish_id": pid, "legenda": legenda(s), "hora": s["hora"]}
         json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(f" {s['id']} na caixa de entrada do TikTok  ({s['hora']})  legenda: {legenda(s)}")
