@@ -16,3 +16,9 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-13 | dia-03/04 | Novità | 30 fps su console (Rob Nelson) | VGC
 2026-11-13 | dia-03/05 | Novità | GTA VI: The Festival, Miami 21/11 | The Fader
 2026-11-13 | dia-03/06 | Novità | Voto sindacale IWGB Rockstar UK | Insider Gaming
+2026-11-14 | dia-04/01 | Novità | Patch day one 1.002.000 (1 GB) | ComicBook.com
+2026-11-14 | dia-04/02 | Novità | Live YouTube 24h per il lancio | Vice
+2026-11-14 | dia-04/03 | Novità | Preordini: Ultimate più venduta (Zelnick) | VGC
+2026-11-14 | dia-04/04 | Novità | Rating adulti Corea + PEGI 18 | Inven Global / Digital Trends
+2026-11-14 | dia-04/05 | Novità | Galleria 40 immagini di lancio | Multiplayer.it
+2026-11-14 | dia-04/06 | Rumor | Embargo recensioni 18/11 (NateTheHate) | Insider Gaming

@@ -1,0 +1,114 @@
+{
+ "dia": 4,
+ "data": "2026-11-14",
+ "shorts": [
+  {
+   "id": "01",
+   "hora": "10:00",
+   "tag": "Novità",
+   "titulo": "La *patch* del day one",
+   "texto": "Rockstar ha già rilasciato l'**aggiornamento 1.002.000** su **PS5** e **Xbox Series X|S**. È obbligatorio e pesa circa **1 GB**. Le note ufficiali però non ci sono ancora: secondo **ComicBook.com** non è chiaro cosa cambi.",
+   "foto": "Artwork/Official Cover Art",
+   "titulo_yt": "GTA 6 ha già la sua prima patch 😱 #Shorts",
+   "descricao": "Aggiornamento 1.002.000 obbligatorio, circa 1 GB, senza note ufficiali. Fonte: ComicBook.com.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming"
+   ],
+   "fonte": "https://comicbook.com/gaming/news/gta-6-update-patch-notes-1002000/"
+  },
+  {
+   "id": "02",
+   "hora": "12:00",
+   "tag": "Novità",
+   "titulo": "Live YouTube di *24 ore*",
+   "texto": "YouTube prepara una diretta di **24 ore** per il lancio, con pre-show dalle **23:00 EST** del **18 novembre** (circa le **5:00** in Italia). Tra i creator anche youtuber **italiani**. Si può attivare la notifica.",
+   "foto": "Places/Vice City",
+   "titulo_yt": "YouTube fa una LIVE di 24 ORE per GTA 6 🔴 #Shorts",
+   "descricao": "La diretta YouTube per il lancio di GTA 6 parte la notte del 18 novembre. Fonte: Vice.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#youtube",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "https://vice.com/en/article/gta-6-is-getting-a-massive-24-hour-youtube-livestream-heres-how-to-watch"
+  },
+  {
+   "id": "03",
+   "hora": "14:00",
+   "tag": "Novità",
+   "titulo": "Vince la *Ultimate Edition*",
+   "texto": "Secondo il CEO di Take-Two **Strauss Zelnick**, i preordini vanno più verso l'edizione da **100 dollari** che verso quella da **80**. Per lui conta il pubblico più appassionato. Sconti ufficiali? Per ora **nessun piano**.",
+   "foto": "Artwork/Jason and Lucia 01",
+   "titulo_yt": "Preordini GTA 6: vince l'edizione da 100$ 💰 #Shorts",
+   "descricao": "Zelnick: i preordini premiano l'edizione premium. Fonte: VGC (intervista CNBC).",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#preordini",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "https://videogameschronicle.com/news/the-100-ultimate-edition-of-gta-6-is-selling-more-pre-orders-than-the-80-standard-edition-take-two-ceo-says/"
+  },
+  {
+   "id": "04",
+   "hora": "16:00",
+   "tag": "Novità",
+   "titulo": "Rating: *solo adulti*",
+   "texto": "In **Corea del Sud** GTA 6 ha ottenuto il rating **solo adulti**. In Europa la scheda **PEGI 18**, apparsa e poi rimossa, parlava di violenza, temi sessuali e **droghe**. Dettagli non confermati da Rockstar.",
+   "foto": "Artwork/Jason Lucia Motel",
+   "titulo_yt": "GTA 6 vietato ai minori: ecco perché 🔞 #Shorts",
+   "descricao": "Rating per adulti in Corea del Sud e PEGI 18 in Europa. Fonte: Inven Global, Digital Trends.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#pegi",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "https://www.invenglobal.com/articles/27299/gta-6-rated-adults-only-in-south-korea-following-private-board-review"
+  },
+  {
+   "id": "05",
+   "hora": "18:00",
+   "tag": "Novità",
+   "titulo": "*40 nuove* immagini",
+   "texto": "Rockstar ha pubblicato una galleria di **40 immagini** nuove: **Jason** al volante, una discoteca, un molo con lo skyline e personaggi con **tatuaggi** curatissimi. Per **Multiplayer.it** sembrano quasi fotografie.",
+   "foto": "Artwork/Jason and Lucia Beach",
+   "titulo_yt": "40 nuove immagini di GTA 6: sembrano foto 📸 #Shorts",
+   "descricao": "Galleria di lancio ufficiale con 40 immagini. Fonte: Multiplayer.it.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#immagini",
+    "#gtavi",
+    "#rockstar"
+   ],
+   "fonte": "https://multiplayer.it/notizie/le-immagini-di-lancio-di-gta-6-sono-spettacolari.html"
+  },
+  {
+   "id": "06",
+   "hora": "21:00",
+   "tag": "Rumor",
+   "titulo": "Quando escono le *recensioni*?",
+   "texto": "Secondo l'insider **NateTheHate**, l'embargo sulle recensioni cadrebbe il **18 novembre**, un giorno prima del lancio. **Insider Gaming** conferma, ma **Rockstar** non ha annunciato nessuna data ufficiale.",
+   "foto": "Artwork/Jason and Lucia Rooftop",
+   "titulo_yt": "Recensioni GTA 6: il giorno prima del lancio? 👀 #Shorts",
+   "descricao": "Rumor: embargo recensioni il 18 novembre, non confermato da Rockstar. Fonte: Insider Gaming.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#recensioni",
+    "#gtavi",
+    "#gaming"
+   ],
+   "fonte": "https://insider-gaming.com/grand-theft-auto-6-review-embargo/"
+  }
+ ]
+}
