@@ -1,2 +1,15 @@
- 01: 2011782 bytes
- TikTok recusou: rascunhos demais pendentes na caixa de entrada (publique ou apague os antigos). Parei.
+ 01: 2012052 bytes
+ 01 na caixa de entrada do TikTok  (10:00)  legenda: GTA 6 ha già la sua prima patch 😱 #gta6 #gta6italia #gtavi #rockstar #gaming #videogiochi
+ 02: 2088943 bytes
+ 02 na caixa de entrada do TikTok  (12:00)  legenda: YouTube fa una LIVE di 24 ORE per GTA 6 🔴 #gta6 #gta6italia #youtube #gtavi #gaming #videogiochi
+ 03: 2097026 bytes
+ 03 na caixa de entrada do TikTok  (14:00)  legenda: Preordini GTA 6: vince l'edizione da 100$ 💰 #gta6 #gta6italia #preordini #gtavi #gaming #videogiochi
+ 04: 2079400 bytes
+ 04 na caixa de entrada do TikTok  (16:00)  legenda: GTA 6 vietato ai minori: ecco perché 🔞 #gta6 #gta6italia #pegi #gtavi #gaming #videogiochi
+ 05: 2074800 bytes
+ 05 na caixa de entrada do TikTok  (18:00)  legenda: 40 nuove immagini di GTA 6: sembrano foto 📸 #gta6 #gta6italia #immagini #gtavi #rockstar #videogiochi
+ 01: SEND_TO_USER_INBOX 
+ 02: SEND_TO_USER_INBOX 
+ 03: SEND_TO_USER_INBOX 
+ 04: SEND_TO_USER_INBOX 
+ 05: SEND_TO_USER_INBOX 
