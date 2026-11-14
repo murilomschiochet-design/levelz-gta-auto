@@ -38,5 +38,10 @@ def print_pagina(url, destino, largura, altura, espera_ms=6000):
         pg.wait_for_function("document.title === 'ok' || document.title === 'grande'", timeout=espera_ms * 2)
         pg.screenshot(path=destino, omit_background=True)
         pg.close()
+    import time
+    for _ in range(60):                     # o Edge às vezes termina antes de gravar o arquivo: espera até 15 s
+        if os.path.exists(destino) and os.path.getsize(destino) > 0:
+            break
+        time.sleep(0.25)
     if not os.path.exists(destino):
         raise RuntimeError("o navegador não gerou a imagem")
