@@ -30,7 +30,7 @@ const c = document.getElementById('card');
 c.innerHTML = `<div style="position:relative">${d.foto ? `<img class="photo" src="${d.foto}" style="object-position:${esc(d.posicao || '50% 30%')}">` : '<div class="photo"></div>'}${d.credito ? `<div class="credito">📷 ${esc(d.credito)}</div>` : ''}</div>
 <div class="tag"><span class="dot"></span>${esc(d.tag || 'Curiosità GTA 6')}</div>
 <h1>${titulo}</h1><p>${texto}</p>
-<div class="cta">${esc(d.canal || 'Altre curiosità ogni giorno')} <span>Iscriviti 🔔</span></div>`;
+<div class="cta">${esc(d.canal || 'Altre curiosità ogni giorno')} <span>${esc(d.botao || 'Iscriviti 🔔')}</span></div>`;
 const LIMITE = 1560;
 const h1 = c.querySelector('h1'), p = c.querySelector('p'), ph = c.querySelector('.photo');
 function cabe(){ return c.getBoundingClientRect().bottom <= LIMITE; }

@@ -85,6 +85,14 @@ document.getElementById('mostrar').onclick = e => {{ e.preventDefault(); feitas 
     with open(os.path.join(SAIDA, "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina)
     print("página:", os.path.join(SAIDA, "index.html"))
+    # agenda do Instagram pro relógio da Cloudflare (ig-relogio): só container + horário, sem token
+    reg_arq = os.path.join(BASE, "saida", dias[-1], "instagram.json")
+    reg = json.load(open(reg_arq, encoding="utf-8")) if os.path.exists(reg_arq) else {}
+    itens = [{"id": k, "container": v["container"], "publicar": v["publicar"]} for k, v in reg.items()
+             if v.get("container") and not v.get("publicado")]
+    with open(os.path.join(SAIDA, "agenda-b959860fa121d428.json"), "w", encoding="utf-8") as f:
+        json.dump({"dia": dias[-1], "itens": itens}, f)
+    print("agenda do Instagram:", len(itens), "itens")
 
 
 if __name__ == "__main__":

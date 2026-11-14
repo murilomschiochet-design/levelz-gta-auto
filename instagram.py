@@ -148,6 +148,11 @@ def publicar():
             quando = dt.datetime.fromisoformat(r["publicar"])
             if quando > agora or agora - quando > dt.timedelta(hours=20):
                 continue
+            if api("GET", r["container"], tok, fields="status_code").get("status_code") == "PUBLISHED":
+                r["publicado"] = agora.isoformat(timespec="minutes")   # o relógio da Cloudflare já publicou
+                print(f" {sid}: já publicado (relógio)")
+                mudou = True
+                continue
             if r["status"] != "FINISHED":
                 r["status"] = esperar(tok, r["container"], 120)
                 if r["status"] != "FINISHED":
