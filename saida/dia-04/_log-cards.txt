@@ -1,0 +1,15 @@
+
+== dia-04: 6 shorts
+ 01 La *patch* del day one
+    ok  (Artwork/Official Cover Art/Official_Cover_Art_landscape.jpg)
+ 02 Live YouTube di *24 ore*
+    ok  (Places/Vice City/Vice_City_05.jpg)
+ 03 Vince la *Ultimate Edition*
+    ok  (Artwork/Jason and Lucia 01/Jason_and_Lucia_01_landscape.jpg)
+ 04 Rating: *solo adulti*
+    ok  (Artwork/Jason Lucia Motel/Jason_and_Lucia_Motel_landscape.jpg)
+ 05 *40 nuove* immagini
+    ok  (Artwork/Jason and Lucia Beach/Jason_and_Lucia_Beach_landscape.jpg)
+ 06 Quando escono le *recensioni*?
+    ok  (Artwork/Jason and Lucia Rooftop/Jason_Lucia_Rooftop_landscape.jpg)
+ painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-04/painel.html

@@ -1,0 +1,38 @@
+{
+ "01": {
+  "container": "18108127889299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T10:00:00+01:00",
+  "publicado": null
+ },
+ "02": {
+  "container": "18108128003299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T12:00:00+01:00",
+  "publicado": null
+ },
+ "03": {
+  "container": "18108128144299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T14:00:00+01:00",
+  "publicado": null
+ },
+ "04": {
+  "container": "18108128252299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T16:00:00+01:00",
+  "publicado": null
+ },
+ "05": {
+  "container": "18108128369299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T18:00:00+01:00",
+  "publicado": null
+ },
+ "06": {
+  "container": "18108128621299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-14T21:00:00+01:00",
+  "publicado": null
+ }
+}

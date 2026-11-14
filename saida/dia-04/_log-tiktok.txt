@@ -1,0 +1,2 @@
+ 01: 2011782 bytes
+TikTok respondeu 400: {"error":{"code":"spam_risk_too_many_pending_share","message":"spam_risk_too_many_pending_share","log_id":"2026111407413150099FA8466EC14A2B4C"}}
