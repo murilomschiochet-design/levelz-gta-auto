@@ -113,7 +113,9 @@ def preparar(dia):
             try:
                 cid = subir(tok, uid, mp4, "", story=True)
                 st = esperar(tok, cid)
-                quando = dt.datetime.combine(dt.date.fromisoformat(data), dt.time(*map(int, s["hora"].split(":"))), FUSO) + dt.timedelta(minutes=5)
+                base = reg[s["id"]]["publicar"] if s["id"] in reg else None   # o Reel pode ter sido remarcado
+                quando = (dt.datetime.fromisoformat(base) if base else dt.datetime.combine(
+                    dt.date.fromisoformat(data), dt.time(*map(int, s["hora"].split(":"))), FUSO)) + dt.timedelta(minutes=5)
                 reg[sk] = {"container": cid, "status": st, "publicar": quando.isoformat(), "publicado": None}
                 json.dump(reg, open(reg_arq, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
                 print(f" {sk}: preparado ({st}), publica {quando:%d/%m %H:%M}")
