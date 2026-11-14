@@ -49,12 +49,14 @@ def frases(txt):
 
 async def falar(texto, voz, destino, sem):
     async with sem:
-        for tentativa in range(4):
+        for tentativa in range(7):
             try:
-                await edge_tts.Communicate(texto, voz, rate="+0%").save(destino)
-                return
+                await edge_tts.Communicate(texto, voz, rate="+0%").save(destino + ".part")
+                if os.path.getsize(destino + ".part") > 1000:
+                    os.replace(destino + ".part", destino)
+                    return
             except Exception:
-                await asyncio.sleep(2 + tentativa * 3)
+                await asyncio.sleep(3 + tentativa * 5)
         raise RuntimeError("TTS falhou: " + texto[:60])
 
 
@@ -128,8 +130,8 @@ def main():
             itens.append(dict(b=b, i=i, ultimo=i == len(fr) - 1, frase=f, mp3=os.path.join(tmp, f"v{b:02d}_{i:02d}.mp3")))
 
     async def tudo():
-        sem = asyncio.Semaphore(4)
-        await asyncio.gather(*[falar(x["frase"], rot["voz"], x["mp3"], sem) for x in itens if not os.path.exists(x["mp3"])])
+        sem = asyncio.Semaphore(3)
+        await asyncio.gather(*[falar(x["frase"], rot["voz"], x["mp3"], sem) for x in itens if not (os.path.exists(x["mp3"]) and os.path.getsize(x["mp3"]) > 1000)])
     asyncio.run(tudo())
 
     # 2) áudio da voz com pausas + linha do tempo das legendas
