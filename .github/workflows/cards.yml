@@ -1,6 +1,6 @@
 # Quando a rotina do Claude manda um roteiro novo (roteiros/dia-XX.json), gera os cards e sobe AGENDADO no @LevelzIT.
 # À mão: Actions > "Cards - gerar e subir" > Run workflow (escolhendo o dia e se sobe ou não).
-# TikTok + legendas: secrets TIKTOK_* e CLOUDFLARE_API_TOKEN (configurados em 13/11).
+# TikTok + legendas: secrets TIKTOK_* e CLOUDFLARE_API_TOKEN. TikTok: no maximo 5 rascunhos por dia (limite do TikTok).
 name: Cards - gerar e subir
 
 on:
