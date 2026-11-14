@@ -51,7 +51,7 @@ Quantidade e horários: `config.json` (`cards_por_dia`, `horas_cards`). Estrutur
 - `texto`: até ~280 caracteres, 2–3 nomes/números entre `**`. Frases curtas, linguagem de YouTube Shorts, sem exagero falso.
 - `titulo_yt`: até 90 caracteres, termina com `#Shorts`. `hashtags`: 5 ou 6, sempre `#gta6` e `#gta6italia`.
 - `foto`: **pasta** dentro de `fotos-oficiais/` (o robô escolhe a imagem usada há mais tempo). Liste com `ls fotos-oficiais/*/ fotos-oficiais/Artwork/`. Escolha a que combina com o assunto (personagem → People/… ou Artwork/…; lugar → Places/…; geral → `Artwork/Official Cover Art`, `Places/Vice City`). Nunca invente pasta.
-- Ordem do dia: o card mais forte às 10:00; rumores nunca no primeiro horário.
+- Ordem do dia: o card mais forte no primeiro horário; rumores nunca no primeiro horário.
 
 ## Passo 4 — validar
 ```bash
