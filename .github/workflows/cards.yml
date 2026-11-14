@@ -60,6 +60,11 @@ jobs:
           mkdir -p saida/${{ steps.dia.outputs.dia }}
           python gerar.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-cards.txt
           python folha_contato.py ${{ steps.dia.outputs.dia }}
+      - name: Gerar video longo (se o roteiro tiver)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python longo/gerar_longo.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-longo.txt
       - name: Subir no YouTube (agendado)
         if: ${{ github.event.inputs.subir != 'nao' }}
         env:
@@ -105,6 +110,7 @@ jobs:
           name: ${{ steps.dia.outputs.dia }}
           path: |
             saida/${{ steps.dia.outputs.dia }}/*.mp4
+            saida/${{ steps.dia.outputs.dia }}/longo-thumb.jpg
             saida/${{ steps.dia.outputs.dia }}/*.jpg
             saida/${{ steps.dia.outputs.dia }}/painel.html
           retention-days: 3

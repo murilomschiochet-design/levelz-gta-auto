@@ -124,7 +124,9 @@ def subir_dia(dia, data_txt=None, teste=False):
     longo = roteiro.get("longo")
     # o longo vai em 5º na fila: se a cota diária acabar (≈6 envios), ele não fica de fora
     if longo and os.path.exists(os.path.join(pasta, "longo.mp4")):
-        itens.insert(4, ("longo", os.path.join(pasta, "longo.mp4"), longo["titulo_yt"], longo["descricao"],
+        extra = os.path.join(pasta, "longo.json")      # descrição final com os capítulos (gerada pelo longo/gerar_longo.py)
+        desc_longo = json.load(open(extra, encoding="utf-8"))["descricao"] if os.path.exists(extra) else longo["descricao"]
+        itens.insert(4, ("longo", os.path.join(pasta, "longo.mp4"), longo["titulo_yt"], desc_longo,
                       longo.get("tags", []), longo["hora"]))
     for sid, mp4, titulo, desc, tags, hora in itens:
         if sid in reg:
@@ -145,6 +147,14 @@ def subir_dia(dia, data_txt=None, teste=False):
                 break
             raise
         reg[sid] = {"id": vid, "publicar": None if teste else quando.isoformat(), "titulo": titulo}
+        thumb = os.path.join(pasta, "longo-thumb.jpg")
+        if sid == "longo" and os.path.exists(thumb):
+            try:
+                from googleapiclient.http import MediaFileUpload
+                yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(thumb, mimetype="image/jpeg")).execute()
+                print("  miniatura do longo aplicada")
+            except Exception as e:      # canal sem verificação por telefone não aceita miniatura
+                print(f"  miniatura não aplicada: {str(e)[:200]}")
         with open(reg_arq, "w", encoding="utf-8") as f:
             json.dump(reg, f, ensure_ascii=False, indent=1)
         print(f" {sid} enviado: https://youtu.be/{vid}  " + ("(privado, teste)" if teste else f"agendado {quando:%d/%m %H:%M}"))

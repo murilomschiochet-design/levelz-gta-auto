@@ -1,12 +1,11 @@
 {
-  "_explicacao": "Cards por dia e horários (Roma). Até o Google aprovar a auditoria, a cota dá ~6 envios por dia. Depois do lançamento (19/11) o plano muda: 5 gameplay + 3 cards + 1 longo.",
-  "cards_por_dia": 6,
+  "_explicacao": "Cards por dia e horários (Roma). 5 cards + 1 vídeo longo (18:00) por dia = 6 envios, o limite de ~6 por dia até sair a auditoria.",
+  "cards_por_dia": 5,
   "horas_cards": [
     "09:00",
     "11:00",
     "13:00",
     "15:00",
-    "17:00",
     "20:00"
   ],
   "instagram": {
@@ -18,5 +17,7 @@
       "#videogiochi",
       "#reels"
     ]
-  }
+  },
+  "hora_longo": "18:00",
+  "voz": "it-IT-DiegoNeural"
 }

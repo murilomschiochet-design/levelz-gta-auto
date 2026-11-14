@@ -53,6 +53,29 @@ Quantidade e horários: `config.json` (`cards_por_dia`, `horas_cards`). Estrutur
 - `foto`: **pasta** dentro de `fotos-oficiais/` (o robô escolhe a imagem usada há mais tempo). Liste com `ls fotos-oficiais/*/ fotos-oficiais/Artwork/`. Escolha a que combina com o assunto (personagem → People/… ou Artwork/…; lugar → Places/…; geral → `Artwork/Official Cover Art`, `Places/Vice City`). Nunca invente pasta.
 - Ordem do dia: o card mais forte no primeiro horário; rumores nunca no primeiro horário.
 
+
+## Passo 3b — vídeo longo do dia (campo `"longo"` no mesmo `roteiros/dia-NN.json`)
+Além dos 5 cards, escreva um vídeo longo de **5 a 6 minutos**, narrado por voz de IA em **italiano**: as notícias do dia explicadas com contexto (pode aprofundar os fatos dos cards e de dias anteriores, sempre com fonte). Mesmas regras: nunca inventar, rumor sempre dito como rumor, nada de leak.
+```json
+"longo": {
+  "hora": "18:00",
+  "titulo_yt": "Título forte, até 90 caracteres, SEM #Shorts",
+  "descricao": "2–3 frases sobre o vídeo.
+
+Fontes: veículo 1, veículo 2.
+Imagens e vídeos: material oficial da Rockstar Games. Canal não afiliado à Rockstar Games ou à Take-Two. (na língua do canal)",
+  "tags": ["8 a 10 tags, sem #"],
+  "tags_desc": ["4 hashtags, como nos cards"],
+  "thumb": {"foto": "Artwork/Jason and Lucia 01", "l1": "GTA 6", "l2": "TRA 5 GIORNI", "caixa": "TUTTO QUELLO CHE SAPPIAMO", "estilo": "vice", "lado": "esq"},
+  "blocos": [{"titulo": "Título curto do capítulo", "texto": "45 a 75 palavras, frases curtas, como se falasse.", "fotos": ["Places/Vice City", "People/Lucia Caminos"]}]
+}
+```
+- **11 ou 12 blocos**, total de **650 a 800 palavras**. O primeiro bloco é o gancho (o fato mais forte do dia); o último pergunta algo nos comentários e termina com "Iscriviti a Levelz IT…".
+- `titulo` do bloco: até 22 caracteres (vira o capítulo da descrição e o selo na tela).
+- `fotos`: 1 a 3 **pastas** de `fotos-oficiais/` que combinem com o bloco (mesma lista dos cards). Nunca invente pasta.
+- `thumb`: `l2` até ~14 caracteres em maiúsculas (é o texto grande), `caixa` até ~26; `estilo` = `vice`, `metal` ou `pincel` (varie de um dia para o outro); `lado` = `esq` ou `dir`; `foto` = uma pasta de `Artwork/` ou `People/`.
+- Escreva para ouvir: números por extenso quando a voz puder ler errado, sem siglas difíceis, sem emojis no `texto`.
+
 ## Passo 4 — validar
 ```bash
 python -c "import json,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'));import os;assert len(d['shorts'])==json.load(open('config.json'))['cards_por_dia'];[os.path.isdir('fotos-oficiais/'+s['foto']) or sys.exit('pasta inexistente: '+s['foto']) for s in d['shorts']];print('ok')"
@@ -63,4 +86,11 @@ python -c "import json,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf
 - `git add roteiros/dia-NN.json temas-usados.md && git commit -m "roteiro dia-NN" && git push origin main` (se o push falhar por causa de mudanças remotas: `git pull --rebase` e push de novo).
 
 ## Passo 6 — relatório (em português, curto)
-Dia, data, os 6 títulos com tag e fonte, e qualquer assunto que você pulou por falta de fonte.
+Dia, data, os 5 títulos com tag e fonte, e qualquer assunto que você pulou por falta de fonte.
+
+Validação do longo (rode também):
+```bash
+python -c "import json,os,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'))['longo'];w=sum(len(b['texto'].split()) for b in d['blocos']);print(w,'palavras');assert 600<=w<=850 and 10<=len(d['blocos'])<=13;[os.path.isdir('fotos-oficiais/'+f) or sys.exit('pasta inexistente: '+f) for b in d['blocos'] for f in b['fotos']];print('ok')"
+```
+
+No relatório, inclua também o título do vídeo longo e quantas palavras ele tem.
