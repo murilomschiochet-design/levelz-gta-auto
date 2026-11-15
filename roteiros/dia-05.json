@@ -1,0 +1,225 @@
+{
+ "dia": 5,
+ "data": "2026-11-15",
+ "shorts": [
+  {
+   "id": "01",
+   "hora": "09:00",
+   "tag": "Novità",
+   "titulo": "*9,69 milioni* di preordini",
+   "texto": "Secondo le stime di **Sensor Tower**, GTA 6 ha già **9,69 milioni** di preordini digitali su console: circa il **75%** su PS5 e il **25%** su Xbox. Sono stime, non numeri ufficiali di Rockstar o Take-Two.",
+   "foto": "Artwork/Official Cover Art",
+   "titulo_yt": "GTA 6: quasi 10 milioni di preordini? 😱 #Shorts",
+   "descricao": "Le stime di Sensor Tower sui preordini digitali di GTA 6. Fonte: Insider Gaming.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming",
+    "#preordini"
+   ],
+   "fonte": "Insider Gaming (10/11/2026), Sensor Tower"
+  },
+  {
+   "id": "02",
+   "hora": "11:00",
+   "tag": "Trailer",
+   "titulo": "Il trailer *Pre-Load Now*",
+   "texto": "Per l'inizio del pre-load Rockstar ha pubblicato **Pre-Load Now**, un trailer di soli **29 secondi** con scene mai viste: discoteca, SWAT e feste in yacht. È uscito il **10 novembre**.",
+   "foto": "Places/Vice City",
+   "titulo_yt": "Nuovo trailer GTA 6: 29 secondi di scene inedite 🔥 #Shorts",
+   "descricao": "Il trailer Pre-Load Now di GTA 6, pubblicato da Rockstar il 10 novembre. Fonte: Insider Gaming, Gfinity.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming",
+    "#gta6trailer"
+   ],
+   "fonte": "Insider Gaming / Gfinity / GameNGuide"
+  },
+  {
+   "id": "03",
+   "hora": "13:00",
+   "tag": "Ufficiale",
+   "titulo": "Edizione fisica *senza disco*",
+   "texto": "Rockstar l'ha confermato: le copie fisiche di GTA 6 contengono solo un **codice** per scaricare il gioco. **Nessun disco** nella scatola. Alcuni negozi, come **Loot Box Gaming**, hanno deciso di non venderlo.",
+   "foto": "Artwork/The Album Cover Art",
+   "titulo_yt": "GTA 6 fisico: dentro la scatola non c'è il disco! 😮 #Shorts",
+   "descricao": "Le copie fisiche di GTA 6 includono solo un codice di download. Fonte: GamesRadar, Dexerto.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming",
+    "#ps5"
+   ],
+   "fonte": "GamesRadar / Dexerto (24/06/2026)"
+  },
+  {
+   "id": "04",
+   "hora": "15:00",
+   "tag": "Curiosità",
+   "titulo": "Il gioco più *costoso*?",
+   "texto": "Secondo **Bloomberg**, GTA 6 è \"quasi certamente\" il videogioco più costoso mai fatto, con più di **8 anni** di sviluppo. **Jennifer Kolbe** di Rockstar ha negato che superi gli **1,5 miliardi** del Burj Khalifa. Cifra ufficiale? Nessuna.",
+   "foto": "Places/Leonida Keys",
+   "titulo_yt": "Quanto è costato GTA 6? Bloomberg e Rockstar 💰 #Shorts",
+   "descricao": "Cosa dice Bloomberg sul budget di GTA 6 e la risposta di Rockstar. Fonte: Bloomberg (via GTA Boom).",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming",
+    "#budget"
+   ],
+   "fonte": "Bloomberg (Jason Schreier), riportato da GTA Boom 14/10/2026"
+  },
+  {
+   "id": "05",
+   "hora": "20:00",
+   "tag": "Rumor",
+   "titulo": "Si sblocca a *mezzanotte*?",
+   "texto": "Si dice che GTA 6 si sblocchi a **mezzanotte** ora locale del **19 novembre**: in Italia, secondo le schede dei **PlayStation Store**, alle **00:00**. Rockstar non ha però confermato l'orario esatto.",
+   "foto": "People/Jason and Lucia",
+   "titulo_yt": "A che ora esce GTA 6 in Italia? ⏰ #Shorts",
+   "descricao": "L'orario di sblocco di GTA 6 secondo gli store, non confermato da Rockstar. Fonte: GodisaGeek, Games.gg.",
+   "hashtags": [
+    "#gta6",
+    "#gta6italia",
+    "#gtavi",
+    "#rockstar",
+    "#gaming",
+    "#rumor"
+   ],
+   "fonte": "GodisaGeek / Games.gg (schede PlayStation Store)"
+  }
+ ],
+ "longo": {
+  "hora": "18:00",
+  "titulo_yt": "GTA 6: mancano 4 giorni! Preordini, trailer, scatola senza disco",
+  "descricao": "Tutte le ultime notizie su GTA 6 a quattro giorni dal lancio: preordini, nuovo trailer, edizione fisica, budget e orario di sblocco. Rumor segnalati come tali.\n\nFonti: Insider Gaming, GamesRadar, Dexerto, Bloomberg (via GTA Boom), Push Square, VGC, GodisaGeek.\nImmagini e video: materiale ufficiale di Rockstar Games. Canale non affiliato a Rockstar Games o a Take-Two.\n\n#gta6 #gta6italia #gtavi #rockstar",
+  "tags": [
+   "gta 6",
+   "gta 6 italia",
+   "gta vi",
+   "gta 6 uscita",
+   "gta 6 preordini",
+   "gta 6 trailer",
+   "rockstar games",
+   "gta 6 novità",
+   "levelz it"
+  ],
+  "tags_desc": [
+   "#gta6",
+   "#gta6italia",
+   "#gtavi",
+   "#rockstar"
+  ],
+  "thumb": {
+   "foto": "Artwork/Jason and Lucia 01",
+   "l1": "GTA 6",
+   "l2": "TRA 4 GIORNI",
+   "caixa": "TUTTE LE ULTIME NOTIZIE",
+   "estilo": "metal",
+   "lado": "dir"
+  },
+  "blocos": [
+   {
+    "titulo": "Ultimi giorni",
+    "texto": "Mancano solo quattro giorni al lancio di GTA 6, il diciannove novembre su PS5 e Xbox Series X e S. Oggi facciamo il punto sulle ultime notizie: preordini record, un nuovo trailer, la scatola senza disco, i costi del gioco e l'orario di sblocco. Mettiti comodo, si parte!",
+    "fotos": [
+     "Artwork/Official Cover Art",
+     "Places/Vice City"
+    ]
+   },
+   {
+    "titulo": "Preordini record",
+    "texto": "Partiamo dai numeri. Secondo Sensor Tower, i preordini digitali su console sono circa nove milioni e settecentomila, per quasi novecentocinquanta milioni di dollari. Circa il settantacinque per cento è su PS5. Attenzione: sono stime di una società esterna, non cifre ufficiali di Rockstar o Take-Two. Ricorda che tutte le cifre di Sensor Tower riguardano solo le console e non includono le copie fisiche.",
+    "fotos": [
+     "Artwork/Jason and Lucia 01"
+    ]
+   },
+   {
+    "titulo": "Record Cyberpunk",
+    "texto": "Quella stima supererebbe gli otto milioni di preordini di Cyberpunk 2077. Ma anche quel dato non è ufficiale, e il confronto non è perfetto, perché Cyberpunk contava anche le copie fisiche. Sony dice però che GTA 6 è il gioco più preordinato di sempre sul PlayStation Store. Take-Two pubblicherà i numeri veri dopo il lancio.",
+    "fotos": [
+     "Places/Vice City",
+     "People/Jason Duval"
+    ]
+   },
+   {
+    "titulo": "Il nuovo trailer",
+    "texto": "Il dieci novembre Rockstar ha pubblicato Pre-Load Now, un trailer di ventinove secondi, per l'inizio del download anticipato. Mostra scene mai viste: una discoteca, azione con la SWAT, feste su yacht. È un assaggio breve, ma conferma il tono di Vice City: caos, sole e problemi in arrivo. Tra le scene c'è anche una corsa in pista. Il trailer è disponibile sul canale ufficiale di Rockstar Games.",
+    "fotos": [
+     "Artwork/Jason and Lucia Rooftop",
+     "Places/Vice City"
+    ]
+   },
+   {
+    "titulo": "Pre-load e patch",
+    "texto": "Il pre-load è partito il dieci novembre e il download su PS5 pesa circa duecentododici gigabyte. Poi è arrivata anche una patch obbligatoria di circa un gigabyte, la uno punto zero zero due. Il consiglio è semplice: libera spazio sul disco e scarica tutto con calma prima del lancio. Se hai una PS5 con poco spazio, conviene cancellare qualche vecchio gioco adesso, senza aspettare l'ultimo giorno.",
+    "fotos": [
+     "Artwork/Jason and Lucia 02"
+    ]
+   },
+   {
+    "titulo": "Scatola senza disco",
+    "texto": "Le copie fisiche di GTA 6 non contengono un disco, ma solo un codice da riscattare per scaricare il gioco. Rockstar l'ha confermato a giugno. Alcuni negozi specializzati hanno deciso di non venderlo per questo motivo. Per chi ama le collezioni fisiche, è una scelta che fa discutere parecchio. Questo vale anche per chi ha comprato la versione in negozio: il codice va attivato prima di poter scaricare.",
+    "fotos": [
+     "Artwork/The Album Cover Art"
+    ]
+   },
+   {
+    "titulo": "Quanto è costato?",
+    "texto": "Bloomberg scrive che GTA 6 è quasi certamente il videogioco più costoso mai realizzato, con più di otto anni di lavoro. Jennifer Kolbe, di Rockstar, ha negato che costi più del Burj Khalifa, cioè circa un miliardo e mezzo di dollari. Una cifra ufficiale, però, non esiste. Resta un record di cui parlare a lungo, anche se i numeri veri, quelli ufficiali, li conosceremo solo più avanti.",
+    "fotos": [
+     "Places/Leonida Keys",
+     "Places/Port Gellhorn"
+    ]
+   },
+   {
+    "titulo": "30 fps su console",
+    "texto": "Secondo il co-director Rob Nelson, riportato da VGC, GTA 6 punta a trenta fotogrammi al secondo su tutte le console, PS5 Pro compresa. Una modalità prestazioni non è stata promessa. Per un mondo così grande e dettagliato, è un compromesso che divide i fan: tu come la vedi?",
+    "fotos": [
+     "Artwork/Jason and Lucia Beach",
+     "People/Lucia Caminos"
+    ]
+   },
+   {
+    "titulo": "Xbox One e cloud",
+    "texto": "GTA 6 non uscirà in versione nativa su Xbox One. Però sarà giocabile con Xbox Cloud Gaming a partire dal diciannove novembre, e va comprato a parte. Su PC, per ora, non c'è nessun annuncio: Take-Two lascia a Rockstar il compito di comunicare eventuali novità. Resta il fatto che il gioco, secondo Rockstar, sarà disponibile per tutti insieme: niente accesso anticipato.",
+    "fotos": [
+     "People/Jason and Lucia",
+     "Artwork/Jason and Lucia Robbery"
+    ]
+   },
+   {
+    "titulo": "Che ora si gioca?",
+    "texto": "Qui serve prudenza. Si dice che il gioco si sblocchi a mezzanotte ora locale del diciannove novembre. In Italia sarebbero le zero zero, secondo le schede dei PlayStation Store. Rockstar però non ha ancora confermato l'orario esatto, quindi controlla sempre i canali ufficiali. Controlla anche il fuso orario della tua console, così non rischi di perdere i primi minuti di gioco.",
+    "fotos": [
+     "Places/Ambrosia"
+    ]
+   },
+   {
+    "titulo": "Festival e live",
+    "texto": "Rockstar e PlayStation organizzano GTA VI: The Festival il ventuno novembre a Miami, con ingresso tramite lotteria. E per il lancio YouTube prepara una diretta di ventiquattro ore, con pre-show dalle undici di sera, ora di New York, del diciotto novembre. Un vero evento mondiale. Entrambi gli eventi sono confermati da fonti ufficiali e dai grandi giornali di settore, come The Fader e Vice.",
+    "fotos": [
+     "Artwork/Jason and Lucia Lock and Load",
+     "Places/Grassrivers"
+    ]
+   },
+   {
+    "titulo": "Tocca a te",
+    "texto": "Per oggi è tutto. Qual è la notizia che ti ha colpito di più? E a che ora giocherai il primo giorno? Scrivilo nei commenti, leggo tutto. Iscriviti a Levelz IT e attiva la campanella per non perdere nessuna novità sul lancio di GTA 6. Ci vediamo domani!",
+    "fotos": [
+     "Artwork/Official Cover Art",
+     "People/Jason and Lucia"
+    ]
+   }
+  ]
+ }
+}

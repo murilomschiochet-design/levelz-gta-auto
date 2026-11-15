@@ -22,3 +22,8 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-14 | dia-04/04 | Novità | Rating adulti Corea + PEGI 18 | Inven Global / Digital Trends
 2026-11-14 | dia-04/05 | Novità | Galleria 40 immagini di lancio | Multiplayer.it
 2026-11-14 | dia-04/06 | Rumor | Embargo recensioni 18/11 (NateTheHate) | Insider Gaming
+2026-11-15 | dia-05/01 | Novità | Stime Sensor Tower: 9,69 mln preordini (75% PS5) | Insider Gaming
+2026-11-15 | dia-05/02 | Trailer | Trailer Pre-Load Now (29 secondi) | Insider Gaming / Gfinity
+2026-11-15 | dia-05/03 | Ufficiale | Edizione fisica senza disco, solo codice | GamesRadar / Dexerto
+2026-11-15 | dia-05/04 | Curiosità | Bloomberg: gioco più costoso; Kolbe nega il Burj Khalifa | Bloomberg via GTA Boom
+2026-11-15 | dia-05/05 | Rumor | Sblocco a mezzanotte locale (schede PS Store) | GodisaGeek / Games.gg
