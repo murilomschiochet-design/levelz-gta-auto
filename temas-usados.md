@@ -27,3 +27,8 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-15 | dia-05/03 | Ufficiale | Edizione fisica senza disco, solo codice | GamesRadar / Dexerto
 2026-11-15 | dia-05/04 | Curiosità | Bloomberg: gioco più costoso; Kolbe nega il Burj Khalifa | Bloomberg via GTA Boom
 2026-11-15 | dia-05/05 | Rumor | Sblocco a mezzanotte locale (schede PS Store) | GodisaGeek / Games.gg
+2026-11-17 | dia-06/01 | Novità | Sensor Tower: oltre 12 mln preordini al 13/11 | CNBC
+2026-11-17 | dia-06/02 | Novità | Morgan Stanley: 40 mln copie entro marzo 2027 | CNBC
+2026-11-17 | dia-06/03 | Curiosità | Tom Petty su Spotify +37.000% | CNBC
+2026-11-17 | dia-06/04 | Novità | Ferie per il lancio +13% (BambooHR) | CNBC
+2026-11-17 | dia-06/05 | Novità | Zelnick: attese ampiamente superate | CNBC
