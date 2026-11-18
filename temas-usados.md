@@ -32,3 +32,8 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-17 | dia-06/03 | Curiosità | Tom Petty su Spotify +37.000% | CNBC
 2026-11-17 | dia-06/04 | Novità | Ferie per il lancio +13% (BambooHR) | CNBC
 2026-11-17 | dia-06/05 | Novità | Zelnick: attese ampiamente superate | CNBC
+2026-11-18 | dia-07/01 | Ufficiale | Sblocco a mezzanotte locale, Nuova Zelanda prima (pagina supporto Rockstar) | GTA BOOM
+2026-11-18 | dia-07/02 | Novità | Game Awards 2026: GTA 6 idoneo a tutte le categorie | Push Square / Insider Gaming
+2026-11-18 | dia-07/03 | Rumor | Embargo recensioni oggi alle 12:00 italiane (orari per regione) | Insider Gaming
+2026-11-18 | dia-07/04 | Ufficiale | Prezzi USA 79,99/99,99 e Vintage Vice City Pack | GTA BOOM
+2026-11-18 | dia-07/05 | Curiosità | Record Metacritic GTA IV 98, GTA V 97 | Insider Gaming
