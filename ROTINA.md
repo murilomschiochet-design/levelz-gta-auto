@@ -67,6 +67,7 @@ Quantidade e horários: `config.json` (`cards_por_dia`, `horas_cards`). Estrutur
 - `titulo_yt`: até 90 caracteres, termina com `#Shorts`. `hashtags`: 5 ou 6, sempre `#gta6` e `#gta6italia`.
 - `foto`: **pasta** dentro de `fotos-oficiais/` (o robô escolhe a imagem usada há mais tempo). Liste com `ls fotos-oficiais/*/ fotos-oficiais/Artwork/`. Escolha a que combina com o assunto (personagem → People/… ou Artwork/…; lugar → Places/…; geral → `Artwork/Official Cover Art`, `Places/Vice City`). Nunca invente pasta.
 - Ordem do dia: o card mais forte no primeiro horário; rumores nunca no primeiro horário.
+- **Cards extras só para TikTok e Instagram** (lá não tem limite de envio): além dos `cards_por_dia`, escreva mais `cards_extra_social` cards (horários em `horas_extra_social`), com o campo `"so_social": true`. Eles **não** sobem no YouTube. Mesmas regras e qualidade dos outros; ids continuam a sequência ("06", "07", "08"). Coloque todos os cards na lista `shorts` em ordem de horário.
 
 
 ## Passo 3b — vídeo longo do dia (campo `"longo"` no mesmo `roteiros/dia-NN.json`)
@@ -98,7 +99,7 @@ Imagens e vídeos: material oficial da Rockstar Games. Canal não afiliado à Ro
 
 ## Passo 4 — validar
 ```bash
-python -c "import json,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'));import os;assert len(d['shorts'])==json.load(open('config.json'))['cards_por_dia'];[os.path.isdir('fotos-oficiais/'+s['foto']) or sys.exit('pasta inexistente: '+s['foto']) for s in d['shorts']];print('ok')"
+python -c "import json,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'));import os;c=json.load(open('config.json'));assert len([s for s in d['shorts'] if not s.get('so_social')])==c['cards_por_dia'] and len([s for s in d['shorts'] if s.get('so_social')])==c.get('cards_extra_social',0);[os.path.isdir('fotos-oficiais/'+s['foto']) or sys.exit('pasta inexistente: '+s['foto']) for s in d['shorts']];print('ok')"
 ```
 
 ## Passo 5 — registrar e publicar

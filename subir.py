@@ -120,7 +120,8 @@ def subir_dia(dia, data_txt=None, teste=False):
         raise SystemExit(f"Canal autorizado errado: {nomes}. Não subi nada.")
     itens = [(s["id"], os.path.join(pasta, f"{s['id']}.mp4"), s["titulo_yt"],
               (s.get("descricao", "") + "\n\n" + " ".join(s.get("hashtags", []))).strip(),
-              [h.lstrip("#") for h in s.get("hashtags", [])], s["hora"]) for s in roteiro["shorts"]]
+              [h.lstrip("#") for h in s.get("hashtags", [])], s["hora"]) for s in roteiro["shorts"]
+             if not s.get("so_social")]   # cards extras: só TikTok e Instagram (cota do YouTube)
     longo = roteiro.get("longo")
     # o longo vai em 5º na fila: se a cota diária acabar (≈6 envios), ele não fica de fora
     if longo and os.path.exists(os.path.join(pasta, "longo.mp4")):

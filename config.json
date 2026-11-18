@@ -19,5 +19,12 @@
     ]
   },
   "hora_longo": "18:00",
-  "voz": "it-IT-GiuseppeMultilingualNeural"
+  "voz": "it-IT-GiuseppeMultilingualNeural",
+  "cards_extra_social": 3,
+  "horas_extra_social": [
+    "10:00",
+    "17:00",
+    "22:00"
+  ],
+  "_explicacao_extra": "Cards extras SÓ para TikTok (página de legendas) e Instagram, com \"so_social\": true no roteiro. O YouTube continua com 5 cards + 1 longo (limite até a auditoria)."
 }
