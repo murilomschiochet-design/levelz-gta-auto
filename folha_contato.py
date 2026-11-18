@@ -26,7 +26,7 @@ else:
     n = len(vids)
     lay = "|".join(f"{(k % 3) * 360}_{(k // 3) * 640}" for k in range(n))
     fil = "".join(f"[{k}:v]trim=end_frame=1,scale=360:640[v{k}];" for k in range(n))
-    fil += "".join(f"[v{k}]" for k in range(n)) + f"xstack=inputs={n}:layout={lay}:fill=black"
+    fil = (fil + "".join(f"[v{k}]" for k in range(n)) + f"xstack=inputs={n}:layout={lay}:fill=black") if n > 1 else fil.rstrip(";").replace("[v0]", "")
     destino = os.path.join(pasta, "_contato.jpg")
 subprocess.run(["ffmpeg", "-v", "error", "-y", *ent, "-filter_complex", fil, "-frames:v", "1", destino], check=True)
 print(destino)
