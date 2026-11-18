@@ -1,0 +1,5 @@
+
+== dia-08: 1 shorts
+ 01 Il primo *easter egg*: Bigfoot!
+    ok  (Places/Grassrivers/Grassrivers_01.jpg)
+ painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-08/painel.html
