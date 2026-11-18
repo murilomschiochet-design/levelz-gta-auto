@@ -24,6 +24,12 @@ html,body{width:1280px;height:720px;overflow:hidden;background:#000}
 #cx span{display:block;font-family:Anton,sans-serif;font-size:var(--fc,78px);color:#fff;text-transform:uppercase;line-height:1.05;-webkit-text-stroke:2px #000;paint-order:stroke fill}
 #seta{position:absolute;z-index:2;width:290px;height:176px;bottom:6px;right:560px;overflow:visible}
 .lado-esq #seta{right:auto;left:560px;transform:scaleX(-1)}
+/* selo: adesivo redondo de chamada (NUOVO, SEGRETO, 😱 …) em cima da foto */
+#selo{position:absolute;z-index:3;top:200px;left:300px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff5a5a,#e0101a 60%,#a30008);
+  border:9px solid #fff;box-shadow:0 0 0 7px #000,8px 10px 0 7px #000;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);text-align:center}
+#selo span{display:block;width:166px;font-family:Anton,"Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:var(--fs,64px);line-height:.95;color:#fff;text-transform:uppercase;-webkit-text-stroke:3px #000;paint-order:stroke fill;overflow-wrap:normal}
+#selo.emoji span{-webkit-text-stroke:0}
+.lado-esq #selo{left:auto;right:300px;transform:rotate(12deg)}
 /* estilo METAL */
 .metal #pincel{display:none}
 .metal #l1{background:linear-gradient(180deg,#ffffff 0%,#d9dde3 35%,#8d949e 52%,#eef1f4 70%,#9aa1aa 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -49,6 +55,7 @@ html,body{width:1280px;height:720px;overflow:hidden;background:#000}
   <div class="t" id="l2"></div>
   <div id="cx"><span></span></div>
 </div>
+<div id="selo"><span></span></div>
 <svg id="seta" viewBox="0 0 330 200">
   <path d="M310 40 C 250 175, 120 190, 50 120" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
   <path d="M310 40 C 250 175, 120 190, 50 120" fill="none" stroke="#ff1f1f" stroke-width="26" stroke-linecap="round"/>
@@ -70,6 +77,8 @@ document.getElementById('l2').textContent = d.l2 || '';
 const cx = document.getElementById('cx');
 if (d.caixa) cx.querySelector('span').textContent = d.caixa; else cx.remove();
 if (d.seta === false) document.getElementById('seta').remove();
+const selo = document.getElementById('selo');
+if (d.selo) selo.querySelector('span').textContent = d.selo; else selo.remove();
 // pincel: mancha preta com bordas irregulares (semente fixa = sempre igual pro mesmo texto)
 let s = [...(d.l1 + d.l2)].reduce((a, c) => a * 31 + c.charCodeAt(0) >>> 0, 7);
 const rnd = () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
@@ -92,6 +101,10 @@ async function ajustar() {
     root.setProperty(id === 'l1' ? '--f1' : '--f2', f + 'px');
     while (el.scrollWidth > W && f > min) { f -= 4; root.setProperty(id === 'l1' ? '--f1' : '--f2', f + 'px'); }
   }
+  if (d.selo) { const sp = selo.querySelector('span'); const so = !/[A-Za-z0-9]/.test(d.selo);
+    if (so) selo.classList.add('emoji');
+    let f = so ? 118 : 70; root.setProperty('--fs', f + 'px');
+    while ((sp.scrollWidth > 168 || sp.scrollHeight > 160) && f > 30) { f -= 3; root.setProperty('--fs', f + 'px'); } }
   if (d.caixa) { let f = 78; while (cx.offsetWidth > 560 && f > 40) { f -= 3; root.setProperty('--fc', f + 'px'); } }
   document.title = 'ok';
 }
