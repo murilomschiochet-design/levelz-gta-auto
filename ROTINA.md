@@ -27,6 +27,12 @@ O card que mais bombou (40 mil views no TikTok, 18/11) era uma **informação qu
 - **Primeiro card do dia (09:00) = o assunto mais comentado do dia.** Rumor nunca no primeiro horário (depois do lançamento quase não deve haver rumor).
 - **Fotos**: continuam só da pasta `fotos-oficiais/` (material oficial). Se existir `fotos-oficiais/Gameplay/` (prints da nossa gameplay), pode usar quando combinar. Nunca print/vídeo de outros youtubers ou streamers.
 - `tag` nova permitida: `Segreto`, `Trucco`, `Record`, `Scoperta` (além das antigas).
+- **Mix obrigatório do dia** (a partir de 19/11, nos 8 cards (os 5 normais + os 3 `so_social`)): estes são os cards que mais importam, então o dia precisa ter de tudo:
+  - pelo menos **2 easter eggs / segredos** (tag `Segreto`): referência escondida, lugar secreto, detalhe que quase ninguém viu;
+  - pelo menos **2 "coisas para fazer"** (tag `Trucco`): atividade divertida, dica prática, o que fazer primeiro, como ganhar dinheiro, onde achar algo;
+  - pelo menos **1 descoberta dos jogadores** (tag `Scoperta`): o que o pessoal achou e está viralizando nas últimas 24–48 h (com veículo grande citando);
+  - o resto são **curiosidades** (realismo, mapa, referências a GTA antigos). Números, recordes e polêmicas só quando forem a notícia grande do dia.
+  - Os cards se alternam com os cortes da nossa gameplay (no máximo 6 por dia, horários em `horas_gameplay`), então nunca dois cards do mesmo tipo seguidos.
 
 ## Passo 1 — já tem roteiro pra hoje?
 - Data de hoje no fuso Europe/Rome: `TZ=Europe/Rome date +%F`.
