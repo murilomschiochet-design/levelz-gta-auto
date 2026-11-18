@@ -37,3 +37,5 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-18 | dia-07/03 | Rumor | Embargo recensioni oggi alle 12:00 italiane (orari per regione) | Insider Gaming
 2026-11-18 | dia-07/04 | Ufficiale | Prezzi USA 79,99/99,99 e Vintage Vice City Pack | GTA BOOM
 2026-11-18 | dia-07/05 | Curiosità | Record Metacritic GTA IV 98, GTA V 97 | Insider Gaming
+
+2026-11-18 | dia-08 | Segreto | primo easter egg: Bigfoot al Cottonmouth Lake (extra) | Insider Gaming
