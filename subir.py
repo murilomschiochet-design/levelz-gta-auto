@@ -107,6 +107,17 @@ def data_alvo(roteiro, arg):
     return (agora + dt.timedelta(days=1)).date() if agora > ultimo - dt.timedelta(minutes=20) else agora.date()
 
 
+def envios_locais_hoje():
+    """Vídeos longos de gameplay que o PC já subiu direto (cortes-gta) contam na mesma cota do dia do YouTube
+    (a cota zera à meia-noite do Pacífico)."""
+    arq = os.path.join(BASE, "gameplay", "enviados_local.json")
+    if not os.path.exists(arq):
+        return 0
+    pac = ZoneInfo("America/Los_Angeles")
+    hoje = dt.datetime.now(pac).date()
+    return sum(1 for e in json.load(open(arq, encoding="utf-8")) if dt.datetime.fromisoformat(e["enviado"]).astimezone(pac).date() == hoje)
+
+
 def subir_dia(dia, data_txt=None, teste=False):
     roteiro = json.load(open(os.path.join(BASE, "roteiros", f"{dia}.json"), encoding="utf-8"))
     pasta = os.path.join(BASE, "saida", dia)
@@ -118,17 +129,32 @@ def subir_dia(dia, data_txt=None, teste=False):
     nomes = [c["snippet"]["title"] for c in yt.channels().list(part="snippet", mine=True).execute().get("items", [])]
     if not any(CANAL_ESPERADO in n.lower() for n in nomes):
         raise SystemExit(f"Canal autorizado errado: {nomes}. Não subi nada.")
-    itens = [(s["id"], os.path.join(pasta, f"{s['id']}.mp4"), s["titulo_yt"],
-              (s.get("descricao", "") + "\n\n" + " ".join(s.get("hashtags", []))).strip(),
-              [h.lstrip("#") for h in s.get("hashtags", [])], s["hora"]) for s in roteiro["shorts"]
-             if not s.get("so_social")]   # cards extras: só TikTok e Instagram (cota do YouTube)
+    def item(s):
+        return (s["id"], os.path.join(pasta, f"{s['id']}.mp4"), s["titulo_yt"],
+                (s.get("descricao", "") + chr(10) * 2 + " ".join(s.get("hashtags", []))).strip(),
+                [h.lstrip("#") for h in s.get("hashtags", [])], s["hora"])
+    # cota do YouTube (≈6 envios/dia até a auditoria): longo + gameplay primeiro, os cards preenchem o resto.
+    # O que não couber no YouTube continua indo pro TikTok e pro Instagram (so_social = só redes).
+    cfg = json.load(open(os.path.join(BASE, "config.json"), encoding="utf-8"))
+    limite = int(cfg.get("yt_max_envios", 6)) - envios_locais_hoje()
     longo = roteiro.get("longo")
-    # o longo vai em 5º na fila: se a cota diária acabar (≈6 envios), ele não fica de fora
-    if longo and os.path.exists(os.path.join(pasta, "longo.mp4")):
+    tem_longo = bool(longo and os.path.exists(os.path.join(pasta, "longo.mp4")))
+    no_yt = [s for s in roteiro["shorts"] if not s.get("so_social")]
+    gps = [s for s in no_yt if s.get("gameplay")]
+    cards = [s for s in no_yt if not s.get("gameplay")]
+    vagas = max(0, limite - (1 if tem_longo else 0))
+    gps = gps[:vagas]
+    cards = cards[:max(0, vagas - len(gps))]
+    escolhidos = {s["id"] for s in gps + cards}
+    fora = [s["id"] for s in no_yt if s["id"] not in escolhidos]
+    if fora:
+        print(" fora do YouTube hoje (cota):", ", ".join(fora), "— seguem no TikTok/Instagram")
+    itens = [item(s) for s in roteiro["shorts"] if s["id"] in escolhidos]
+    if tem_longo:
         extra = os.path.join(pasta, "longo.json")      # descrição final com os capítulos (gerada pelo longo/gerar_longo.py)
         desc_longo = json.load(open(extra, encoding="utf-8"))["descricao"] if os.path.exists(extra) else longo["descricao"]
-        itens.insert(4, ("longo", os.path.join(pasta, "longo.mp4"), longo["titulo_yt"], desc_longo,
-                      longo.get("tags", []), longo["hora"]))
+        itens.insert(min(4, len(itens)), ("longo", os.path.join(pasta, "longo.mp4"), longo["titulo_yt"], desc_longo,
+                                          longo.get("tags", []), longo["hora"]))
     for sid, mp4, titulo, desc, tags, hora in itens:
         if sid in reg:
             print(f" {sid} já enviado ({reg[sid]['id']})")

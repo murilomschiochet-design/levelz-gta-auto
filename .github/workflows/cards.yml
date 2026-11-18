@@ -54,6 +54,9 @@ jobs:
           [ -z "$DIA" ] && DIA=$(ls roteiros/dia-*.json | sort -V | tail -1 | xargs basename | sed 's/.json//')
           echo "dia=$DIA" >> "$GITHUB_OUTPUT"
           echo "Dia: $DIA"
+      - name: Cortes de gameplay do dia (fila do painel de cortes)
+        continue-on-error: true
+        run: python gameplay.py incluir ${{ steps.dia.outputs.dia }}
       - name: Gerar cards
         run: |
           set -o pipefail
@@ -119,7 +122,7 @@ jobs:
         run: |
           git config user.name "levelz-bot"
           git config user.email "levelz-bot@users.noreply.github.com"
-          git add saida uso-fotos.json tiktok_token.enc 2>/dev/null || true
+          git add saida uso-fotos.json tiktok_token.enc roteiros gameplay 2>/dev/null || true
           git diff --cached --quiet && { echo "nada novo"; exit 0; }
           git commit -q -m "cards ${{ steps.dia.outputs.dia }}: registros"
           git pull --rebase -q

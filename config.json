@@ -26,5 +26,17 @@
     "17:00",
     "22:00"
   ],
-  "_explicacao_extra": "Cards extras SÓ para TikTok (página de legendas) e Instagram, com \"so_social\": true no roteiro. O YouTube continua com 5 cards + 1 longo (limite até a auditoria)."
+  "_explicacao_extra": "Cards extras SÓ para TikTok (página de legendas) e Instagram, com \"so_social\": true no roteiro. O YouTube continua com 5 cards + 1 longo (limite até a auditoria).",
+  "yt_max_envios": 6,
+  "gameplay_por_dia": 6,
+  "gameplay_yt_por_dia": 3,
+  "horas_gameplay": [
+    "12:30",
+    "14:30",
+    "16:30",
+    "19:00",
+    "21:30",
+    "23:00"
+  ],
+  "_explicacao_gameplay": "Cortes de gameplay (fila gameplay/fila.json, enviada pelo botão do painel de cortes): 6 por dia no TikTok e no Instagram, 3 deles também no YouTube. Com gameplay na fila, o YouTube fica: longo + 3 gameplay + 2 cards (limite de 6 até a auditoria)."
 }

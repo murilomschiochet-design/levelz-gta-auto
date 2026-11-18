@@ -22,6 +22,8 @@ def legenda(s):
             vistos.add(h.lower())
             tags.append(h)
     titulo = " ".join(w for w in s["titulo_yt"].split() if w.lower() != "#shorts")   # #Shorts é só do YouTube
+    if s.get("legenda"):          # cortes de gameplay: legenda própria das redes
+        titulo = s["legenda"]
     return f"{titulo} {' '.join(tags)}".strip()[:2200]
 
 
