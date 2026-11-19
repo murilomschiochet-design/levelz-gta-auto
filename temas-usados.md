@@ -39,3 +39,11 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-18 | dia-07/05 | Curiosità | Record Metacritic GTA IV 98, GTA V 97 | Insider Gaming
 
 2026-11-18 | dia-08 | Segreto | primo easter egg: Bigfoot al Cottonmouth Lake (extra) | Insider Gaming
+2026-11-19 | dia-09/01 | Record | Metacritic 99, pari con Ocarina of Time | The Next Web
+2026-11-19 | dia-09/02 | Trucco | Soldi presto: Illegal Operations e Kingfishers | Vice
+2026-11-19 | dia-09/03 | Scoperta | Cane con jet ski | Kotaku
+2026-11-19 | dia-09/04 | Segreto | Granchio gigante (attivazione sconosciuta) | Kotaku
+2026-11-19 | dia-09/05 | Curiosità | Radio Stockyard FM, PinkPantheress | Kotaku
+2026-11-19 | dia-09/06 | Segreto | Uovo sulla torre radio (extra) | Kotaku
+2026-11-19 | dia-09/07 | Trucco | Tesori sommersi di Kenton (extra) | Vice
+2026-11-19 | dia-09/08 | Curiosità | Telefono alla guida (extra) | Kotaku
