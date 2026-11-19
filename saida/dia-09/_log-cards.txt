@@ -1,0 +1,19 @@
+
+== dia-09: 8 shorts
+ 01 GTA 6 come *Ocarina of Time*
+    ok  (Artwork/Official Cover Art/Official_Cover_Art_landscape.jpg)
+ 10 L'*uovo* sulla torre radio
+    ok  (Places/Vice City/Vice_City_12.jpg)
+ 02 Soldi *facili* all'inizio
+    ok  (Artwork/Jason and Lucia Robbery/Jason_and_Lucia_Robbery_landscape.jpg)
+ 03 Il cane col *jet ski*
+    ok  (Places/Leonida Keys/Leonida_Keys_07.jpg)
+ 04 Il *granchio* gigante
+    ok  (Places/Grassrivers/Grassrivers_03.jpg)
+ 07 I tesori di *Kenton*
+    ok  (Places/Leonida Keys/Leonida_Keys_01.jpg)
+ 05 La radio di *PinkPantheress*
+    ok  (Artwork/The Album Cover Art/The_Album_Cover_Art_landscape.jpg)
+ 08 Il telefono alla *guida*
+    ok  (Artwork/Jason and Lucia 01/Jason_and_Lucia_01_landscape.jpg)
+ painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-09/painel.html
