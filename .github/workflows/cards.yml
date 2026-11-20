@@ -54,7 +54,7 @@ jobs:
           [ -z "$DIA" ] && DIA=$(ls roteiros/dia-*.json | sort -V | tail -1 | xargs basename | sed 's/.json//')
           echo "dia=$DIA" >> "$GITHUB_OUTPUT"
           echo "Dia: $DIA"
-      - name: Cortes de gameplay do dia (fila do painel de cortes)
+      - name: Gameplay do dia (biblioteca do painel de cortes - 5 shorts + 1 longo)
         continue-on-error: true
         run: python gameplay.py incluir ${{ steps.dia.outputs.dia }}
       - name: Gerar cards
@@ -62,7 +62,7 @@ jobs:
           set -o pipefail
           mkdir -p saida/${{ steps.dia.outputs.dia }}
           python gerar.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-cards.txt
-          python folha_contato.py ${{ steps.dia.outputs.dia }}
+          python folha_contato.py ${{ steps.dia.outputs.dia }} || echo "folha de contato pulada (dia sem cards)"
       - name: Gerar video longo (se o roteiro tiver)
         continue-on-error: true
         run: |
@@ -78,6 +78,10 @@ jobs:
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "Sem chave do YouTube ainda: pulei o upload."; exit 0; fi
           set -o pipefail
           python subir.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-subir.txt
+      - name: Longo que nao subiu volta pra biblioteca
+        if: always()
+        continue-on-error: true
+        run: python gameplay.py conferir ${{ steps.dia.outputs.dia }}
       - name: Instagram (sobe os Reels sem publicar; publica na hora certa o workflow 3-instagram)
         continue-on-error: true
         env:

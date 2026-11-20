@@ -34,6 +34,14 @@ O card que mais bombou (40 mil views no TikTok, 18/11) era uma **informação qu
   - o resto são **curiosidades** (realismo, mapa, referências a GTA antigos). Números, recordes e polêmicas só quando forem a notícia grande do dia.
   - Os cards se alternam com os cortes da nossa gameplay (no máximo 6 por dia, horários em `horas_gameplay`), então nunca dois cards do mesmo tipo seguidos.
 
+## Passo 0 — biblioteca de gameplay (DESDE 21/11 O CANAL É SÓ GAMEPLAY)
+Desde 21/11 o canal publica por dia **5 shorts de gameplay + 1 vídeo longo de gameplay**, tirados da biblioteca (`gameplay/fila.json` e `gameplay/longos.json`, que o painel de cortes do PC preenche). O próprio GitHub Actions coloca a gameplay no dia. **Os cards viraram ESTEPE**: só existem quando a biblioteca não tem o suficiente. Conte assim:
+```bash
+python -c "import json,os,datetime as d;ld=lambda a:json.load(open(a,encoding='utf-8'))['itens'] if os.path.exists(a) else [];g=sum(1 for x in ld('gameplay/fila.json') if not x.get('usado_em'));L=sum(1 for x in ld('gameplay/longos.json') if not x.get('usado_em'));h=os.popen('TZ=Europe/Rome date +%F').read().strip();ag=any(e.get('publicar','')[:10]==h for e in (json.load(open('gameplay/enviados_local.json',encoding='utf-8')) if os.path.exists('gameplay/enviados_local.json') else []));print('SHORTS',g,'LONGOS',L,'LONGO_JA_AGENDADO_HOJE',ag,'CARDS_NECESSARIOS',max(0,5-g),'LONGO_NECESSARIO',L==0 and not ag)"
+```
+- **`CARDS_NECESSARIOS` = 0 e `LONGO_NECESSARIO` = False → dia só de gameplay.** Faça só o Passo 1 (se já existe roteiro de hoje, pare) e escreva `roteiros/dia-NN.json` exatamente assim: `{"dia": N, "data": "<hoje>", "so_gameplay": true, "shorts": []}`. **Não pesquise, não escreva cards nem longo, não mexa em `temas-usados.md`.** Depois só `git add roteiros/dia-NN.json`, commit "roteiro dia-NN (so gameplay)" e push. Relatório: "dia só de gameplay — X shorts e Y longos na biblioteca".
+- **Senão (biblioteca baixa):** siga os passos normais, mas escreva **só `CARDS_NECESSARIOS` cards**, nos horários `horas_cards[5 - CARDS_NECESSARIOS:]` do `config.json` (os primeiros horários ficam pra gameplay), **sem** cards `so_social`, e escreva o campo `"longo"` **só se `LONGO_NECESSARIO` for True**. As regras de conteúdo e o mix valem para os cards que você escrever. No relatório, primeira linha: "⚠️ biblioteca baixa (X shorts, Y longos): mande gameplay nova".
+
 ## Passo 1 — já tem roteiro pra hoje?
 - Data de hoje no fuso Europe/Rome: `TZ=Europe/Rome date +%F`.
 - Se algum arquivo em `roteiros/` ou `roteiros/_antigos/` tiver `"data": "<hoje>"`, **pare** e só escreva no relatório "já existe roteiro para hoje".
@@ -105,8 +113,9 @@ Imagens e vídeos: material oficial da Rockstar Games. Canal não afiliado à Ro
 
 ## Passo 4 — validar
 ```bash
-python -c "import json,sys;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'));import os;c=json.load(open('config.json'));assert len([s for s in d['shorts'] if not s.get('so_social')])==c['cards_por_dia'] and len([s for s in d['shorts'] if s.get('so_social')])==c.get('cards_extra_social',0);[os.path.isdir('fotos-oficiais/'+s['foto']) or sys.exit('pasta inexistente: '+s['foto']) for s in d['shorts']];print('ok')"
+python -c "import json,sys,os;d=json.load(open('roteiros/dia-NN.json',encoding='utf-8'));[os.path.isdir('fotos-oficiais/'+s['foto']) or sys.exit('pasta inexistente: '+s['foto']) for s in d['shorts']];print(len(d['shorts']),'cards, longo:', 'sim' if d.get('longo') else 'nao','- ok')"
 ```
+(o número de cards tem que ser igual a `CARDS_NECESSARIOS` do Passo 0)
 
 ## Passo 5 — registrar e publicar
 - Acrescente uma linha por card em `temas-usados.md`: `AAAA-MM-DD | dia-NN | tag | assunto curto | fonte`.

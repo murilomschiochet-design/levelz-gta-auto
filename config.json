@@ -1,12 +1,11 @@
 {
-  "_explicacao": "Cards por dia e horários (Roma). 5 cards + 1 vídeo longo (18:00) por dia = 6 envios, o limite de ~6 por dia até sair a auditoria.",
   "cards_por_dia": 5,
   "horas_cards": [
-    "09:00",
     "11:00",
-    "13:00",
-    "15:00",
-    "20:00"
+    "13:30",
+    "16:30",
+    "19:30",
+    "22:00"
   ],
   "instagram": {
     "conta_pc": "levelz",
@@ -20,23 +19,17 @@
   },
   "hora_longo": "18:00",
   "voz": "it-IT-GiuseppeMultilingualNeural",
-  "cards_extra_social": 3,
-  "horas_extra_social": [
-    "10:00",
-    "17:00",
+  "cards_extra_social": 0,
+  "horas_extra_social": [],
+  "yt_max_envios": 6,
+  "gameplay_por_dia": 5,
+  "gameplay_yt_por_dia": 5,
+  "horas_gameplay": [
+    "11:00",
+    "13:30",
+    "16:30",
+    "19:30",
     "22:00"
   ],
-  "_explicacao_extra": "Cards extras SÓ para TikTok (página de legendas) e Instagram, com \"so_social\": true no roteiro. O YouTube continua com 5 cards + 1 longo (limite até a auditoria).",
-  "yt_max_envios": 6,
-  "gameplay_por_dia": 6,
-  "gameplay_yt_por_dia": 3,
-  "horas_gameplay": [
-    "12:30",
-    "14:30",
-    "16:30",
-    "19:00",
-    "21:30",
-    "23:00"
-  ],
-  "_explicacao_gameplay": "Cortes de gameplay (fila gameplay/fila.json, enviada pelo botão do painel de cortes): 6 por dia no TikTok e no Instagram, 3 deles também no YouTube. Com gameplay na fila, o YouTube fica: longo + 3 gameplay + 2 cards (limite de 6 até a auditoria)."
+  "_explicacao_gameplay": "Desde 21/11 o canal é SÓ GAMEPLAY: por dia 5 shorts (gameplay/fila.json) + 1 longo (gameplay/longos.json) da biblioteca do painel de cortes, iguais no YouTube, Instagram e TikTok. Cards são ESTEPE: a rotina só escreve cards pros horários que a gameplay não preencher (horas_cards[shorts_livres:]) e o longo narrado só se não houver longo de gameplay."
 }

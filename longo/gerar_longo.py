@@ -115,6 +115,9 @@ def main():
     if not rot:
         print("roteiro sem vídeo longo")
         return
+    if rot.get("gameplay"):
+        print("o longo de hoje é de gameplay (biblioteca): nada a gerar")
+        return
     rot = dict(rot, voz=CONFIG["voz"], canal=CANAL)
     nome = dia
     out = os.path.join(LZ, "saida", dia)
