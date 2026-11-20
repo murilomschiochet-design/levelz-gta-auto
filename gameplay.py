@@ -65,7 +65,7 @@ def incluir(dia):
             continue
         s = {"id": sid, "hora": horas[i], "tag": "Gameplay", "titulo": it["titulo_yt"][:60],
              "titulo_yt": it["titulo_yt"], "descricao": it.get("descricao", ""), "hashtags": it.get("hashtags", []),
-             "legenda": it.get("legenda", ""), "gameplay": True, "origem": it["id"]}
+             "legenda": it.get("legenda", ""), "gameplay": True, "origem": it["id"], "video_url": it["video"]}
         if len(novos) >= n_yt:
             s["so_social"] = True
         novos.append(s)

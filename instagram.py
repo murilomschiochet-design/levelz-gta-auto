@@ -142,8 +142,17 @@ def preparar(dia):
         try:
             cid = subir(tok, uid, mp4, legenda(s))
         except Exception as e:
-            print(f" {s['id']}: erro ao subir: {e}")
-            continue
+            if not s.get("video_url"):
+                print(f" {s['id']}: erro ao subir: {e}")
+                continue
+            # plano B (cortes de gameplay): o Instagram busca o vídeo no endereço dele em vez de receber o arquivo
+            try:
+                cid = api("POST", f"{uid}/media", tok, media_type="REELS", video_url=s["video_url"],
+                          caption=legenda(s), share_to_feed="true")["id"]
+                print(f" {s['id']}: upload direto falhou, foi pelo endereço do vídeo")
+            except Exception as e2:
+                print(f" {s['id']}: erro ao subir: {e} / pelo endereço: {e2}")
+                continue
         st = esperar(tok, cid)
         quando = dt.datetime.combine(dt.date.fromisoformat(data), dt.time(*map(int, s["hora"].split(":"))), FUSO)
         reg[s["id"]] = {"container": cid, "status": st, "publicar": quando.isoformat(), "publicado": None}
