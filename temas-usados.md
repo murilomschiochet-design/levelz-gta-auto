@@ -47,3 +47,13 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-19 | dia-09/06 | Segreto | Uovo sulla torre radio (extra) | Kotaku
 2026-11-19 | dia-09/07 | Trucco | Tesori sommersi di Kenton (extra) | Vice
 2026-11-19 | dia-09/08 | Curiosità | Telefono alla guida (extra) | Kotaku
+
+2026-11-20 | dia-10/01 | Record | Stime Sensor Tower: 24,6 mln copie day one, 2,36 mld $ | TweakTown
+2026-11-20 | dia-10/10 | Scoperta | Trinity Apartments, casa di Dexter a Vice Beach (extra) | TheWrap
+2026-11-20 | dia-10/02 | Trucco | Silenziatore all'Ammu-Nation di Key Lento | Red Bull Games
+2026-11-20 | dia-10/03 | Segreto | Eclipse di Paul Walker a Vespucci Island | FandomWire
+2026-11-20 | dia-10/04 | Trucco | Soldi nascosti sotto il pavimento di Jason | Red Bull Games
+2026-11-20 | dia-10/07 | Curiosità | Edifici blu scuro/chiaro sulla mappa (extra) | Red Bull Games
+2026-11-20 | dia-10/05 | Segreto | Barca «Slice of Life» di Dexter ai moli | TheWrap
+2026-11-20 | dia-10/08 | Trucco | Come seminare la polizia (extra) | Red Bull Games
+2026-11-20 | dia-10 | Longo | 10 trucchi da sapere subito (guida Red Bull Games) | Red Bull Games
