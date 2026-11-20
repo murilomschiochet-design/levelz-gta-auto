@@ -71,7 +71,20 @@ def legenda(s):
     return f"{titulo}\n\n{desc}\n\n{' '.join(tags[:25])}".strip()[:2200]
 
 
-def subir(tok, uid, mp4, texto, story=False):
+def subir(tok, uid, mp4, texto, story=False, tentativas=3):
+    """Cria o container e manda o arquivo; o Instagram às vezes recusa um upload bom (ProcessingFailedError),
+    então tenta de novo com um container novo, esperando um pouco entre as tentativas."""
+    for i in range(tentativas):
+        try:
+            return _subir_uma(tok, uid, mp4, texto, story)
+        except RuntimeError as e:
+            if i == tentativas - 1:
+                raise
+            print(f"   tentativa {i + 1} falhou ({str(e)[:80]}); tentando de novo em {30 * (i + 1)} s")
+            time.sleep(30 * (i + 1))
+
+
+def _subir_uma(tok, uid, mp4, texto, story=False):
     """Cria o container (Reel ou story) e manda o arquivo (upload resumível). Devolve o id do container."""
     if story:
         c = api("POST", f"{uid}/media", tok, media_type="STORIES", upload_type="resumable")
