@@ -1,0 +1,17 @@
+ story-01: preparado (FINISHED), publica 20/11 09:05
+ 01: preparado (FINISHED), publica 20/11 09:00
+ 10: preparado (FINISHED), publica 20/11 10:00
+ 02: preparado (FINISHED), publica 20/11 11:00
+ g1: preparado (FINISHED), publica 20/11 12:30
+ 03: preparado (FINISHED), publica 20/11 13:00
+ g2: erro ao subir: upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}}
+ 04: preparado (FINISHED), publica 20/11 15:00
+ story-g3: erro ao subir: upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}}
+ g3: erro ao subir: upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}}
+ 07: preparado (FINISHED), publica 20/11 17:00
+ g4: preparado (FINISHED), publica 20/11 19:00
+ 05: preparado (FINISHED), publica 20/11 20:00
+ g5: preparado (FINISHED), publica 20/11 21:30
+ 08: preparado (FINISHED), publica 20/11 22:00
+ story-g6: preparado (FINISHED), publica 20/11 23:05
+ g6: erro ao subir: upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}}

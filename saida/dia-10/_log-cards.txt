@@ -1,0 +1,25 @@
+
+== dia-10: 14 shorts
+ 01 24 milioni in *un giorno*
+    ok  (Artwork/Official Cover Art/Official_Cover_Art_landscape.jpg)
+ 10 La casa di *Dexter* a Vice City
+    ok  (Places/Vice City/Vice_City_13.jpg)
+ 02 Compra *subito* un silenziatore
+    ok  (Artwork/Jason and Lucia Lock and Load/Jason_Lucia_Lock_And_Load_landscape.jpg)
+ g1 já existe
+ 03 La *Eclipse* di Paul Walker
+    ok  (Places/Vice City/Vice_City_14.jpg)
+ g2 já existe
+ 04 Nascondi i *soldi* così
+    ok  (Artwork/Jason Lucia Motel/Jason_and_Lucia_Motel_landscape.jpg)
+ g3 já existe
+ 07 Edifici *blu*: entri o no?
+    ok  (Places/Ambrosia/Ambrosia_01.jpg)
+ g4 já existe
+ 05 La barca di *Dexter*
+    ok  (Places/Port Gellhorn/Port_Gellhorn_05.jpg)
+ g5 já existe
+ 08 Come *seminare* la polizia
+    ok  (Artwork/Jason and Lucia Robbery/Jason_and_Lucia_Robbery_landscape.jpg)
+ g6 já existe
+ painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-10/painel.html
