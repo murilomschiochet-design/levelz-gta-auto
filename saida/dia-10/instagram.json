@@ -45,37 +45,37 @@
   "container": "18109459595299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T17:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "g4": {
   "container": "18109459778299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T19:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "05": {
   "container": "18109460150299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T20:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "g5": {
   "container": "18109460309299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T21:30:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "08": {
   "container": "18109460519299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T22:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "story-g6": {
   "container": "18109460630299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T23:05:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00"
  },
  "g2": {
   "container": "18109463909299772",
@@ -99,6 +99,7 @@
   "container": "18109465082299772",
   "status": "FINISHED",
   "publicar": "2026-11-20T23:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-20T23:27+01:00",
+  "media_id": "18145104577723734"
  }
 }
