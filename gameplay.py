@@ -95,6 +95,11 @@ def incluir_longo(dia, rot):
     if (rot.get("longo") or {}).get("gameplay"):
         print(f"{dia} já tem o longo de gameplay")
         return
+    reg_pc = os.path.join(BASE, "gameplay", "enviados_local.json")   # longos que o PC antigo já agendou no YouTube
+    if rot.get("data") and os.path.exists(reg_pc) and any(
+            (e.get("publicar") or "")[:10] == rot["data"] for e in json.load(open(reg_pc, encoding="utf-8"))):
+        print(f"{dia}: já tem longo agendado hoje (enviado pelo PC) — o da biblioteca fica pra outro dia")
+        return
     bib = json.load(open(LONGOS, encoding="utf-8"))
     livres = [it for it in bib["itens"] if not it.get("usado_em")]
     if not livres:

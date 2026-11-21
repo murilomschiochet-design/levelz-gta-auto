@@ -44,7 +44,10 @@ python -c "import json,os,datetime as d;ld=lambda a:json.load(open(a,encoding='u
 
 ## Passo 1 — já tem roteiro pra hoje?
 - Data de hoje no fuso Europe/Rome: `TZ=Europe/Rome date +%F`.
-- Se algum arquivo em `roteiros/` ou `roteiros/_antigos/` tiver `"data": "<hoje>"`, **pare** e só escreva no relatório "já existe roteiro para hoje".
+- **Rode este comando e obedeça o resultado** (não decida olhando os nomes dos arquivos — o número do `dia-NN` NÃO é a data; em 21/11 o robô PL confundiu o dia-06 de ontem com hoje e o canal ficou sem vídeos):
+  `python -c "import json,glob,os,re,datetime,zoneinfo;h=str(datetime.datetime.now(zoneinfo.ZoneInfo('Europe/Rome')).date());fs=glob.glob('roteiros/dia-*.json')+glob.glob('roteiros/_antigos/dia-*.json');ja=[f for f in fs if json.load(open(f,encoding='utf-8')).get('data')==h];n=max([int(re.search(r'dia-(\d+)',f).group(1)) for f in fs] or [0])+1;print('HOJE',h,'JA_EXISTE',bool(ja),ja,'PROXIMO','dia-%02d'%n)"`
+  - `JA_EXISTE True` → **pare** e só escreva no relatório "já existe roteiro para hoje".
+  - `JA_EXISTE False` → siga; o arquivo de hoje é o `PROXIMO`.
 - O próximo número é o maior `dia-NN` entre `roteiros/` e `roteiros/_antigos/` mais 1 (dois dígitos: dia-03, dia-04…).
 
 ## Passo 2 — pesquisar

@@ -155,6 +155,7 @@ def subir_dia(dia, data_txt=None, teste=False):
         desc_longo = json.load(open(extra, encoding="utf-8"))["descricao"] if os.path.exists(extra) else longo["descricao"]
         itens.insert(min(4, len(itens)), ("longo", os.path.join(pasta, "longo.mp4"), longo["titulo_yt"], desc_longo,
                                           longo.get("tags", []), longo["hora"]))
+    proximo_atrasado = agora
     for sid, mp4, titulo, desc, tags, hora in itens:
         if sid in reg:
             print(f" {sid} já enviado ({reg[sid]['id']})")
@@ -165,7 +166,9 @@ def subir_dia(dia, data_txt=None, teste=False):
         h, m = map(int, hora.split(":"))
         quando = dt.datetime.combine(data, dt.time(h, m), FUSO)
         if quando < agora + dt.timedelta(minutes=15):
-            quando = agora + dt.timedelta(minutes=20)       # horário já passou: publica daqui a 20 min
+            # horário já passou (robô rodou atrasado): espalha, 1 a cada 75 min a partir de daqui a 20 min
+            quando = max(agora + dt.timedelta(minutes=20), proximo_atrasado)
+            proximo_atrasado = quando + dt.timedelta(minutes=75)
         try:
             vid, st = enviar(yt, mp4, titulo, desc, tags, None if teste else quando, privado=teste)
         except Exception as e:
