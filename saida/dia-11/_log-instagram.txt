@@ -1,0 +1,9 @@
+ story-g1: preparado (FINISHED), publica 21/11 11:05
+ g1: preparado (FINISHED), publica 21/11 11:00
+ g2: preparado (FINISHED), publica 21/11 13:30
+   tentativa 1 falhou (upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","mes); tentando de novo em 30 s
+ story-g3: preparado (FINISHED), publica 21/11 16:35
+ g3: preparado (FINISHED), publica 21/11 16:30
+ g4: preparado (FINISHED), publica 21/11 19:30
+ story-g5: preparado (FINISHED), publica 21/11 22:05
+ g5: preparado (FINISHED), publica 21/11 22:00
