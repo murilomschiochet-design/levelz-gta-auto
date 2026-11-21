@@ -22,8 +22,12 @@ def legenda(s):
             vistos.add(h.lower())
             tags.append(h)
     titulo = " ".join(w for w in s["titulo_yt"].split() if w.lower() != "#shorts")   # #Shorts é só do YouTube
-    if s.get("legenda"):          # cortes de gameplay: legenda própria das redes
-        titulo = s["legenda"]
+    if s.get("legenda"):          # cortes de gameplay: a legenda já vem com hashtags; não repete as mesmas
+        texto = [w for w in s["legenda"].split() if not w.startswith("#")]
+        for h in [w for w in s["legenda"].split() if w.startswith("#")] + tags:
+            if h.lower() not in {t.lower() for t in texto}:
+                texto.append(h)
+        return " ".join(texto).strip()[:2200]
     return f"{titulo} {' '.join(tags)}".strip()[:2200]
 
 
