@@ -1,0 +1,12 @@
+ story-g1: preparado (FINISHED), publica 22/11 11:05
+   tentativa 1 falhou (upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","mes); tentando de novo em 30 s
+ g1: preparado (FINISHED), publica 22/11 11:00
+ g2: preparado (FINISHED), publica 22/11 13:30
+ story-g3: preparado (FINISHED), publica 22/11 16:35
+   tentativa 1 falhou (upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","mes); tentando de novo em 30 s
+   tentativa 2 falhou (upload 400: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","mes); tentando de novo em 60 s
+ g3: upload direto falhou, foi pelo endereço do vídeo
+ g3: preparado (FINISHED), publica 22/11 16:30
+ g4: preparado (FINISHED), publica 22/11 19:30
+ story-g5: preparado (FINISHED), publica 22/11 22:05
+ g5: preparado (FINISHED), publica 22/11 22:00

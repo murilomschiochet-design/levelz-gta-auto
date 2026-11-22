@@ -1,0 +1,8 @@
+
+== dia-12: 5 shorts
+ g1 já existe
+ g2 já existe
+ g3 já existe
+ g4 já existe
+ g5 já existe
+ painel: /home/runner/work/levelz-gta-auto/levelz-gta-auto/saida/dia-12/painel.html
