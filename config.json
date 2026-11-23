@@ -22,8 +22,8 @@
   "cards_extra_social": 0,
   "horas_extra_social": [],
   "yt_max_envios": 6,
-  "gameplay_por_dia": 5,
-  "gameplay_yt_por_dia": 5,
+  "gameplay_por_dia": 0,
+  "gameplay_yt_por_dia": 0,
   "horas_gameplay": [
     "11:00",
     "13:30",
@@ -31,5 +31,15 @@
     "19:30",
     "22:00"
   ],
-  "_explicacao_gameplay": "Desde 21/11 o canal é SÓ GAMEPLAY: por dia 5 shorts (gameplay/fila.json) + 1 longo (gameplay/longos.json) da biblioteca do painel de cortes, iguais no YouTube, Instagram e TikTok. Cards são ESTEPE: a rotina só escreve cards pros horários que a gameplay não preencher (horas_cards[shorts_livres:]) e o longo narrado só se não houver longo de gameplay."
+  "longo_gameplay": false,
+  "curiosita_por_dia": 6,
+  "horas_curiosita": [
+    "10:00",
+    "12:00",
+    "14:30",
+    "17:00",
+    "19:30",
+    "22:00"
+  ],
+  "_explicacao_gameplay": "Desde 24/11 o canal é SÓ SHORTS DE CURIOSIDADE (curiosita.py): a rotina escreve curiosita_por_dia shorts (cenas da nossa gameplay trocando a cada 2-3 s + voz + legenda no meio), iguais no YouTube, Instagram e TikTok. Sem vídeo longo, sem cortes de gameplay da fila e sem cards. A fila (gameplay/fila.json) e os longos ficam guardados caso queira voltar."
 }

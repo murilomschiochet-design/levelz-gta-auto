@@ -89,6 +89,9 @@ def incluir_shorts(dia, rot):
 def incluir_longo(dia, rot):
     """O vídeo longo do dia vem da biblioteca (gameplay/longos.json): o PC deixa o vídeo em partes de até 24 MB no
     Cloudflare; aqui as partes são baixadas, juntadas e conferidas (sha256) em saida/dia-XX/longo.mp4."""
+    if not CONFIG.get("longo_gameplay", True):
+        print("vídeo longo desligado (config longo_gameplay = false): só shorts")
+        return
     if not os.path.exists(LONGOS):
         print("sem biblioteca de vídeos longos")
         return

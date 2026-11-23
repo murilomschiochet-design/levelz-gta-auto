@@ -57,6 +57,12 @@ jobs:
       - name: Gameplay do dia (biblioteca do painel de cortes - 5 shorts + 1 longo)
         continue-on-error: true
         run: python gameplay.py incluir ${{ steps.dia.outputs.dia }}
+      - name: Shorts de curiosidade (cenas da gameplay + voz + legenda no meio)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p saida/${{ steps.dia.outputs.dia }}
+          python curiosita.py ${{ steps.dia.outputs.dia }} 2>&1 | tee saida/${{ steps.dia.outputs.dia }}/_log-curiosita.txt
       - name: Gerar cards
         run: |
           set -o pipefail
@@ -126,7 +132,7 @@ jobs:
         run: |
           git config user.name "levelz-bot"
           git config user.email "levelz-bot@users.noreply.github.com"
-          git add saida uso-fotos.json tiktok_token.enc roteiros gameplay 2>/dev/null || true
+          git add saida uso-fotos.json tiktok_token.enc roteiros gameplay/*.json 2>/dev/null || true
           git diff --cached --quiet && { echo "nada novo"; exit 0; }
           git commit -q -m "cards ${{ steps.dia.outputs.dia }}: registros"
           git pull --rebase -q

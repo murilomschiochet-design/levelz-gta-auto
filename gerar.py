@@ -155,6 +155,9 @@ def gerar_dia(arq):
     log(f"\n== {dia}: {len(shorts)} shorts")
     for n, s in enumerate(shorts):
         mp4 = os.path.join(pasta_saida, f"{s['id']}.mp4")
+        if s.get("curiosita") or s.get("gameplay"):     # já vêm prontos (curiosita.py / biblioteca do painel)
+            log(f" {s['id']} {'curiosità' if s.get('curiosita') else 'gameplay'}: {'ok' if os.path.exists(mp4) else 'NÃO GERADO'}")
+            continue
         if os.path.exists(mp4):
             log(f" {s['id']} já existe")
             continue
