@@ -1,0 +1,50 @@
+{
+ "story-g1": {
+  "container": "18110038919299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T11:05:00+01:00",
+  "publicado": null
+ },
+ "g1": {
+  "container": "18110038994299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T11:00:00+01:00",
+  "publicado": null
+ },
+ "g2": {
+  "container": "18110039228299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T13:30:00+01:00",
+  "publicado": null
+ },
+ "story-g3": {
+  "container": "18110039345299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T16:35:00+01:00",
+  "publicado": null
+ },
+ "g3": {
+  "container": "18110039450299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T16:30:00+01:00",
+  "publicado": null
+ },
+ "g4": {
+  "container": "18110039567299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T19:30:00+01:00",
+  "publicado": null
+ },
+ "story-g5": {
+  "container": "18110039690299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T22:05:00+01:00",
+  "publicado": null
+ },
+ "g5": {
+  "container": "18110039939299772",
+  "status": "FINISHED",
+  "publicar": "2026-11-23T22:00:00+01:00",
+  "publicado": null
+ }
+}
