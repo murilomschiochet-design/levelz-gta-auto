@@ -16,6 +16,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import unicodedata
 import urllib.request
 
@@ -30,6 +31,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG = json.load(open(os.path.join(BASE, "config.json"), encoding="utf-8"))
 BANCO = os.path.join(BASE, "gameplay", "cenas.json")
 VOZ = CONFIG.get("voz", "it-IT-GiuseppeMultilingualNeural")
+VOZ_RESERVA = "it-IT-DiegoNeural"   # só se a principal não responder
 VELOCIDADE = "+18%"
 PAUSA_MAX = 0.08          # silêncio máximo entre palavras (s)
 CENA_DUR = 3.4            # cada cena do banco tem 3,5 s
@@ -53,8 +55,8 @@ def norm(w):
 
 
 # ---------------------------------------------------------------- voz
-async def _tts(texto, destino):
-    com = edge_tts.Communicate(texto, VOZ, rate=VELOCIDADE, boundary="WordBoundary")
+async def _tts(texto, destino, voz=VOZ):
+    com = edge_tts.Communicate(texto, voz, rate=VELOCIDADE, boundary="WordBoundary")
     palavras = []
     with open(destino, "wb") as f:
         async for c in com.stream():
@@ -67,13 +69,19 @@ async def _tts(texto, destino):
 
 def narrar(texto, base):
     """Gera base.mp3 (rápido, sem pausas longas) e devolve as palavras com o tempo já corrigido."""
-    for tentativa in range(3):
+    # 24/11: no GitHub o edge-tts falhou 3 vezes seguidas em 3 de 6 shorts ("No audio was received").
+    # Agora: 7 tentativas com espera crescente; as 2 últimas com a voz reserva.
+    for tentativa in range(7):
+        voz = VOZ if tentativa < 5 else VOZ_RESERVA
         try:
-            palavras = asyncio.run(_tts(texto, base + "-bruto.mp3"))
+            palavras = asyncio.run(_tts(texto, base + "-bruto.mp3", voz))
             if palavras:
+                if voz != VOZ:
+                    print(f"   voz: usei a reserva {voz}")
                 break
         except Exception as e:
             print(f"   voz: tentativa {tentativa + 1} falhou ({e})")
+        time.sleep(min(60, 5 * 2 ** tentativa))
     else:
         raise RuntimeError("edge-tts não respondeu")
     trechos, novo, corte, ini = [], [], 0.0, 0.0
