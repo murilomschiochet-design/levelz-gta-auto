@@ -1,0 +1,5 @@
+ story-c1: preparado (FINISHED), publica 24/11 10:05
+ c1: preparado (FINISHED), publica 24/11 10:00
+ c2: preparado (FINISHED), publica 24/11 12:00
+ story-c4: preparado (FINISHED), publica 24/11 17:05
+ c4: preparado (FINISHED), publica 24/11 17:00
