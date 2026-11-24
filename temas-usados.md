@@ -57,3 +57,10 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-20 | dia-10/05 | Segreto | Barca «Slice of Life» di Dexter ai moli | TheWrap
 2026-11-20 | dia-10/08 | Trucco | Come seminare la polizia (extra) | Red Bull Games
 2026-11-20 | dia-10 | Longo | 10 trucchi da sapere subito (guida Red Bull Games) | Red Bull Games
+
+2026-11-24 | dia-14/c1 | Scoperta | Prima persona nascosta (glitch telefono/camera) | GamingBible
+2026-11-24 | dia-14/c2 | Segreto | Due radio segrete: Kodak Black e The Vault (poster Waink) | The Tab / PC Gamer
+2026-11-24 | dia-14/c3 | Trucco | Viaggio veloce col taxi per 100$ | BGR
+2026-11-24 | dia-14/c4 | Trucco | Casseforti aperte con qualsiasi esplosione | The Big Lead
+2026-11-24 | dia-14/c5 | Curiosità | Modalità Focus (due stick) | The Big Lead
+2026-11-24 | dia-14/c6 | Segreto | Luce aliena a Port Gellhorn dopo le 2 di notte | ComicBook.com
