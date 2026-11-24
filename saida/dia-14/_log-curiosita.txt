@@ -1,23 +1,16 @@
  c1 10:00 PRIMA PERSONA NASCOSTA
     ok: 18.9 s, 10 cenas
  c2 12:00 DUE RADIO SEGRETE
-   voz: tentativa 1 falhou (No audio was received. Please verify that your parameters are correct.)
     ok: 18.0 s, 9 cenas
  c3 14:30 VIAGGIO VELOCE COL TAXI
    voz: tentativa 1 falhou (No audio was received. Please verify that your parameters are correct.)
    voz: tentativa 2 falhou (No audio was received. Please verify that your parameters are correct.)
    voz: tentativa 3 falhou (No audio was received. Please verify that your parameters are correct.)
-    ERRO: edge-tts não respondeu
+    ok: 17.9 s, 10 cenas
  c4 17:00 CASSEFORTI SENZA CODICE
-   voz: tentativa 1 falhou (No audio was received. Please verify that your parameters are correct.)
     ok: 16.9 s, 11 cenas
  c5 19:30 LA MODALITÀ FOCUS
    voz: tentativa 1 falhou (No audio was received. Please verify that your parameters are correct.)
-   voz: tentativa 2 falhou (No audio was received. Please verify that your parameters are correct.)
-   voz: tentativa 3 falhou (No audio was received. Please verify that your parameters are correct.)
-    ERRO: edge-tts não respondeu
+    ok: 16.5 s, 7 cenas
  c6 22:00 LUCE STRANA NEL CIELO
-   voz: tentativa 1 falhou (No audio was received. Please verify that your parameters are correct.)
-   voz: tentativa 2 falhou (No audio was received. Please verify that your parameters are correct.)
-   voz: tentativa 3 falhou (No audio was received. Please verify that your parameters are correct.)
-    ERRO: edge-tts não respondeu
+    ok: 17.2 s, 8 cenas
