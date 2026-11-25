@@ -64,3 +64,10 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-24 | dia-14/c4 | Trucco | Casseforti aperte con qualsiasi esplosione | The Big Lead
 2026-11-24 | dia-14/c5 | Curiosità | Modalità Focus (due stick) | The Big Lead
 2026-11-24 | dia-14/c6 | Segreto | Luce aliena a Port Gellhorn dopo le 2 di notte | ComicBook.com
+
+2026-11-25 | dia-15/c1 | Scoperta | Conversa NPC su Mount Chiliad (jetpack e uova) | GamingBible
+2026-11-25 | dia-15/c2 | Segreto | Stanze nascoste nei negozi via minimappa | Red Bull Games
+2026-11-25 | dia-15/c3 | Trucco | Rimettere in piedi auto ribaltate / spingere barche | Kotaku
+2026-11-25 | dia-15/c4 | Curiosità | Sedersi ovunque (cerchio/B) | Kotaku
+2026-11-25 | dia-15/c5 | Segreto | Dolores il serpente di Jason, bonus Focus | Red Bull Games
+2026-11-25 | dia-15/c6 | Trucco | Fence Yasmani (gioielli) e Tyrone (narcotici) | Red Bull Games
