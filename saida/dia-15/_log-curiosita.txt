@@ -1,0 +1,12 @@
+ c1 10:00 MISTERO CHILIAD RITORNA
+    ok: 19.4 s, 9 cenas
+ c2 12:00 STANZE NASCOSTE NEI NEGOZI
+    ok: 18.5 s, 9 cenas
+ c3 14:30 RIMETTI IN PIEDI L'AUTO
+    ok: 18.7 s, 8 cenas
+ c4 17:00 PUOI SEDERTI OVUNQUE
+    ok: 18.2 s, 8 cenas
+ c5 19:30 IL SERPENTE DI JASON
+    ok: 17.7 s, 7 cenas
+ c6 22:00 VENDI AL PREZZO GIUSTO
+    ok: 18.4 s, 8 cenas
