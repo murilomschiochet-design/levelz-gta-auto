@@ -71,3 +71,10 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-25 | dia-15/c4 | Curiosità | Sedersi ovunque (cerchio/B) | Kotaku
 2026-11-25 | dia-15/c5 | Segreto | Dolores il serpente di Jason, bonus Focus | Red Bull Games
 2026-11-25 | dia-15/c6 | Trucco | Fence Yasmani (gioielli) e Tyrone (narcotici) | Red Bull Games
+
+2026-11-26 | dia-16/c1 | Scoperta | Bikini Girl del primo trailer trovata sullo yacht | UNILAD Tech
+2026-11-26 | dia-16/c2 | Segreto | Statua con quattro cavalli vicino a Manifest Canyon | GamingBible
+2026-11-26 | dia-16/c3 | Trucco | Come attivare i cheat col telefono (L1+R1), sbloccati dopo i titoli | Red Bull
+2026-11-26 | dia-16/c4 | Segreto | Pappagalli parlanti nel liquor store delle Keys, soldi vicino al generatore | GamingBible
+2026-11-26 | dia-16/c5 | Trucco | Auto rubate con tracker: scansione con Waink | Kotaku
+2026-11-26 | dia-16/c6 | Curiosità | Svelare la mappa in aereo (2-3 ore) con taxi a 100$ | PowerPyx
