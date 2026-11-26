@@ -1,0 +1,12 @@
+ c1 10:00 BIKINI GIRL TROVATA!
+    ok: 16.8 s, 8 cenas
+ c2 12:00 LA STATUA MISTERIOSA
+    ok: 17.1 s, 9 cenas
+ c3 14:30 TRUCCHI: COME ATTIVARLI
+    ok: 18.8 s, 9 cenas
+ c4 17:00 I PAPPAGALLI PARLANTI
+    ok: 17.3 s, 9 cenas
+ c5 19:30 ATTENTO AL TRACKER
+    ok: 17.2 s, 9 cenas
+ c6 22:00 SVELA TUTTA LA MAPPA
+    ok: 18.9 s, 11 cenas
