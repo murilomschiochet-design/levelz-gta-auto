@@ -4122,7 +4122,10 @@
    "sessao": "20261121-222939",
    "n": 4,
    "origem": "LB@44s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-005",
@@ -4138,7 +4141,10 @@
    "sessao": "20261121-222939",
    "n": 6,
    "origem": "LB@60s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-007",
@@ -4146,7 +4152,10 @@
    "sessao": "20261121-222939",
    "n": 7,
    "origem": "LB@68s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-008",
@@ -4154,7 +4163,10 @@
    "sessao": "20261121-222939",
    "n": 8,
    "origem": "LB@76s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-009",
@@ -4164,7 +4176,8 @@
    "origem": "LB@84s",
    "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
    "usos": [
-    "dia-16"
+    "dia-16",
+    "dia-17"
    ]
   },
   {
@@ -4173,7 +4186,10 @@
    "sessao": "20261121-222939",
    "n": 10,
    "origem": "LB@92s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-011",
@@ -4181,7 +4197,10 @@
    "sessao": "20261121-222939",
    "n": 11,
    "origem": "LB@100s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-012",
@@ -4189,7 +4208,10 @@
    "sessao": "20261121-222939",
    "n": 12,
    "origem": "LB@108s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-013",
@@ -4197,7 +4219,10 @@
    "sessao": "20261121-222939",
    "n": 13,
    "origem": "LB@116s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-014",
@@ -4205,7 +4230,10 @@
    "sessao": "20261121-222939",
    "n": 14,
    "origem": "LB@124s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-015",
@@ -4213,7 +4241,10 @@
    "sessao": "20261121-222939",
    "n": 15,
    "origem": "LB@132s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-016",
@@ -4221,7 +4252,10 @@
    "sessao": "20261121-222939",
    "n": 16,
    "origem": "LB@140s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-017",
@@ -4385,7 +4419,10 @@
    "sessao": "20261121-222939",
    "n": 35,
    "origem": "LB@292s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-036",
@@ -4393,7 +4430,10 @@
    "sessao": "20261121-222939",
    "n": 36,
    "origem": "LB@300s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-037",
@@ -4401,7 +4441,10 @@
    "sessao": "20261121-222939",
    "n": 37,
    "origem": "LB@308s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-038",
@@ -4409,7 +4452,10 @@
    "sessao": "20261121-222939",
    "n": 38,
    "origem": "LB@316s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-039",
@@ -4417,7 +4463,10 @@
    "sessao": "20261121-222939",
    "n": 39,
    "origem": "LB@324s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-040",
@@ -4425,7 +4474,10 @@
    "sessao": "20261121-222939",
    "n": 40,
    "origem": "LB@332s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-1.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-041",
@@ -5401,7 +5453,10 @@
    "sessao": "20261121-222939",
    "n": 162,
    "origem": "LB@1308s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-163",
@@ -5417,7 +5472,10 @@
    "sessao": "20261121-222939",
    "n": 164,
    "origem": "LB@1324s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-165",
@@ -5505,7 +5563,10 @@
    "sessao": "20261121-222939",
    "n": 175,
    "origem": "LB@1412s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-176",
@@ -5513,7 +5574,10 @@
    "sessao": "20261121-222939",
    "n": 176,
    "origem": "LB@1420s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-177",
@@ -5684,7 +5748,10 @@
    "sessao": "20261121-222939",
    "n": 197,
    "origem": "LB@1588s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-5.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-198",
@@ -6356,7 +6423,10 @@
    "sessao": "20261121-222939",
    "n": 281,
    "origem": "LB@2260s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-282",
@@ -6364,7 +6434,10 @@
    "sessao": "20261121-222939",
    "n": 282,
    "origem": "LB@2268s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-283",
@@ -6452,7 +6525,10 @@
    "sessao": "20261121-222939",
    "n": 293,
    "origem": "LB@2356s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-294",
@@ -6460,7 +6536,10 @@
    "sessao": "20261121-222939",
    "n": 294,
    "origem": "LB@2364s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-295",
@@ -6468,7 +6547,10 @@
    "sessao": "20261121-222939",
    "n": 295,
    "origem": "LB@2372s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-296",
@@ -6548,7 +6630,10 @@
    "sessao": "20261121-222939",
    "n": 305,
    "origem": "LB@2452s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-306",
@@ -6564,7 +6649,10 @@
    "sessao": "20261121-222939",
    "n": 307,
    "origem": "LB@2468s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-308",
@@ -6588,7 +6676,10 @@
    "sessao": "20261121-222939",
    "n": 310,
    "origem": "LB@2492s",
-   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg"
+   "folha": "gameplay/cenas/folhas/20261121-222939-8.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261121-222939-311",
@@ -8698,7 +8789,8 @@
    "origem": "LB@892s",
    "folha": "gameplay/cenas/folhas/20261122-230202-3.jpg",
    "usos": [
-    "dia-14"
+    "dia-14",
+    "dia-17"
    ]
   },
   {
@@ -8707,7 +8799,10 @@
    "sessao": "20261122-230202",
    "n": 111,
    "origem": "LB@900s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-3.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-3.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-112",
@@ -8715,7 +8810,10 @@
    "sessao": "20261122-230202",
    "n": 112,
    "origem": "LB@908s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-3.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-3.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-113",
@@ -9478,7 +9576,10 @@
    "sessao": "20261122-230202",
    "n": 201,
    "origem": "LB@1620s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-202",
@@ -9486,7 +9587,10 @@
    "sessao": "20261122-230202",
    "n": 202,
    "origem": "LB@1628s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-203",
@@ -9494,7 +9598,10 @@
    "sessao": "20261122-230202",
    "n": 203,
    "origem": "LB@1636s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-204",
@@ -9502,7 +9609,10 @@
    "sessao": "20261122-230202",
    "n": 204,
    "origem": "LB@1644s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-205",
@@ -9510,7 +9620,10 @@
    "sessao": "20261122-230202",
    "n": 205,
    "origem": "LB@1652s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-206",
@@ -9518,7 +9631,10 @@
    "sessao": "20261122-230202",
    "n": 206,
    "origem": "LB@1660s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-207",
@@ -9558,7 +9674,10 @@
    "sessao": "20261122-230202",
    "n": 211,
    "origem": "LB@1700s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-212",
@@ -9574,7 +9693,10 @@
    "sessao": "20261122-230202",
    "n": 213,
    "origem": "LB@1716s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-214",
@@ -9582,7 +9704,10 @@
    "sessao": "20261122-230202",
    "n": 214,
    "origem": "LB@1724s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-215",
@@ -9606,7 +9731,10 @@
    "sessao": "20261122-230202",
    "n": 217,
    "origem": "LB@1748s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-218",
@@ -9702,7 +9830,10 @@
    "sessao": "20261122-230202",
    "n": 229,
    "origem": "LB@1844s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-230",
@@ -9710,7 +9841,10 @@
    "sessao": "20261122-230202",
    "n": 230,
    "origem": "LB@1852s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-231",
@@ -9718,7 +9852,10 @@
    "sessao": "20261122-230202",
    "n": 231,
    "origem": "LB@1860s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-232",
@@ -9734,7 +9871,10 @@
    "sessao": "20261122-230202",
    "n": 233,
    "origem": "LB@1876s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-234",
@@ -9750,7 +9890,10 @@
    "sessao": "20261122-230202",
    "n": 235,
    "origem": "LB@1892s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-236",
@@ -9758,7 +9901,10 @@
    "sessao": "20261122-230202",
    "n": 236,
    "origem": "LB@1900s",
-   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg"
+   "folha": "gameplay/cenas/folhas/20261122-230202-6.jpg",
+   "usos": [
+    "dia-17"
+   ]
   },
   {
    "id": "20261122-230202-237",

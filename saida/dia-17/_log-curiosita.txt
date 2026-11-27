@@ -1,0 +1,12 @@
+ c1 10:00 LA CASA UFO ESISTE DAVVERO
+    ok: 18.2 s, 9 cenas
+ c2 12:00 NON TROVI LO ZOMBIX?
+    ok: 18.9 s, 9 cenas
+ c3 14:30 AUTO SEMPRE CON TE
+    ok: 16.9 s, 9 cenas
+ c4 17:00 LE FRECCE CONTANO!
+    ok: 15.6 s, 8 cenas
+ c5 19:30 PORTA ROSSA = ALLARME
+    ok: 16.2 s, 9 cenas
+ c6 22:00 COCCOLE E RIFIUTI = FOCUS
+    ok: 17.0 s, 8 cenas
