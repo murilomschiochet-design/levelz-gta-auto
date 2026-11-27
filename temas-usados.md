@@ -78,3 +78,10 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-26 | dia-16/c4 | Segreto | Pappagalli parlanti nel liquor store delle Keys, soldi vicino al generatore | GamingBible
 2026-11-26 | dia-16/c5 | Trucco | Auto rubate con tracker: scansione con Waink | Kotaku
 2026-11-26 | dia-16/c6 | Curiosità | Svelare la mappa in aereo (2-3 ore) con taxi a 100$ | PowerPyx
+
+2026-11-27 | dia-17/c1 | Scoperta | Casa con UFO di San Andreas ritrovata a Belville | Dexerto
+2026-11-27 | dia-17/c2 | Trucco | Zombix: va chiesto al commesso del minimarket | Kotaku
+2026-11-27 | dia-17/c3 | Trucco | App Scooter Bros: chiamare/riparare l'auto, deposito | Kotaku
+2026-11-27 | dia-17/c4 | Segreto | Frecce: gli automobilisti NPC reagiscono | Kotaku
+2026-11-27 | dia-17/c5 | Segreto | Focus sulle porte: bianco aperta, rosso allarme | Digit / Kotaku
+2026-11-27 | dia-17/c6 | Curiosità | Animali e rifiuti danno Focus e punti comportamento | Kotaku
