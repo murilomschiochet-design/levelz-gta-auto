@@ -1,3 +1,4 @@
+# 27/11: repositório público (minutos do Actions sem limite).
 # Quando a rotina do Claude manda um roteiro novo (roteiros/dia-XX.json), gera os cards e sobe AGENDADO no @LevelzIT.
 # À mão: Actions > "Cards - gerar e subir" > Run workflow (escolhendo o dia e se sobe ou não).
 # Legendas + videos pro TikTok: pagina lz-legendas (CLOUDFLARE_API_TOKEN). TikTok pela API desligado (atrasava e duplicava).
