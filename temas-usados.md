@@ -85,3 +85,31 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-27 | dia-17/c4 | Segreto | Frecce: gli automobilisti NPC reagiscono | Kotaku
 2026-11-27 | dia-17/c5 | Segreto | Focus sulle porte: bianco aperta, rosso allarme | Digit / Kotaku
 2026-11-27 | dia-17/c6 | Curiosità | Animali e rifiuti danno Focus e punti comportamento | Kotaku
+
+# TikTok (só TikTok, feitos no PC): não repetir no YouTube
+2026-11-27 | dia-17x/c7 | Scoperta | Portale per Vice City (TikTok) | Pure Xbox
+2026-11-27 | dia-17x/c8 | Scoperta | Il clown nell'ascensore (TikTok) | The Loadout
+2026-11-28 | tt-28/c1 | Scoperta | L'NPC che sa tutto (TikTok) | LADbible
+2026-11-28 | tt-28/c2 | Segreto | Missione all'inferno (TikTok) | GamingBible
+2026-11-28 | tt-28/c3 | Trucco | Togli la stella parlando (TikTok) | Kotaku
+2026-11-28 | tt-28/c4 | Segreto | Tartarughe Ninja (TikTok) | The Loadout
+2026-11-28 | tt-28/c5 | Trucco | Mangia prima delle missioni (TikTok) | Kotaku
+2026-11-28 | tt-28/c6 | Curiosità | La spesa tagliata (TikTok) | GameSpot
+2026-11-28 | tt-28/c7 | Segreto | Il blocco di Mario (TikTok) | The Loadout
+2026-11-28 | tt-28/c8 | Trucco | Ripara l'auto alla pompa (TikTok) | Kotaku
+2026-11-29 | tt-29/c1 | Scoperta | Jason e Lucia cloni? (TikTok) | The Loadout
+2026-11-29 | tt-29/c2 | Segreto | Il cappello di Arthur (TikTok) | The Loadout
+2026-11-29 | tt-29/c3 | Trucco | Bagagliaio armadio (TikTok) | Kotaku
+2026-11-29 | tt-29/c4 | Segreto | La trappola di Saw (TikTok) | The Loadout
+2026-11-29 | tt-29/c5 | Trucco | Rallenta il tempo (TikTok) | Kotaku
+2026-11-29 | tt-29/c6 | Curiosità | Lucia odia Motivation (TikTok) | The Loadout
+2026-11-29 | tt-29/c7 | Segreto | I fantasmi del faro (TikTok) | The Loadout
+2026-11-29 | tt-29/c8 | Trucco | Il controller vibra (TikTok) | Kotaku
+2026-11-30 | tt-30/c1 | Scoperta | Evasione da Capri (TikTok) | The Loadout
+2026-11-30 | tt-30/c2 | Segreto | Cimitero degli animali (TikTok) | The Loadout
+2026-11-30 | tt-30/c3 | Trucco | La pistola del prologo (TikTok) | The Loadout
+2026-11-30 | tt-30/c4 | Segreto | Lo scheletro sul fondale (TikTok) | The Loadout
+2026-11-30 | tt-30/c5 | Trucco | Shopping in coppia (TikTok) | Kotaku
+2026-11-30 | tt-30/c6 | Curiosità | Torna Wade (TikTok) | The Loadout
+2026-11-30 | tt-30/c7 | Segreto | Robot nel magazzino (TikTok) | The Loadout
+2026-11-30 | tt-30/c8 | Trucco | Tagga i nemici (TikTok) | Kotaku
