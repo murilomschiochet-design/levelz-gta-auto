@@ -45,18 +45,21 @@
   "container": "18110720822299772",
   "status": "FINISHED",
   "publicar": "2026-11-27T19:30:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-28T01:31+01:00",
+  "media_id": "18031802057924838"
  },
  "story-c6": {
   "container": "18110720846299772",
   "status": "FINISHED",
   "publicar": "2026-11-27T22:05:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-28T01:31+01:00",
+  "media_id": "18360974428173251"
  },
  "c6": {
   "container": "18110720852299772",
   "status": "FINISHED",
   "publicar": "2026-11-27T22:00:00+01:00",
-  "publicado": null
+  "publicado": "2026-11-28T01:31+01:00",
+  "media_id": "18121155668084072"
  }
 }
