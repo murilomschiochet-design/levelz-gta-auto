@@ -113,3 +113,10 @@ A rotina acrescenta uma linha por card: `AAAA-MM-DD | dia-XX/NN | tag | assunto 
 2026-11-30 | tt-30/c6 | Curiosità | Torna Wade (TikTok) | The Loadout
 2026-11-30 | tt-30/c7 | Segreto | Robot nel magazzino (TikTok) | The Loadout
 2026-11-30 | tt-30/c8 | Trucco | Tagga i nemici (TikTok) | Kotaku
+
+2026-11-28 | dia-18/c1 | Scoperta | Eventi casuali: incidenti, rapine, aereo che precipita | Kotaku
+2026-11-28 | dia-18/c2 | Trucco | Scorciatoie in auto: radio, fari, uscita rapida, tasto della rabbia | Kotaku
+2026-11-28 | dia-18/c3 | Segreto | Cameo dell'uccello di San Andreas e 62 specie di uccelli | Kotaku
+2026-11-28 | dia-18/c4 | Trucco | Allenamento: pesi, corsa, pesca, barretta proteica | Red Bull
+2026-11-28 | dia-18/c5 | Trucco | Borse delle rapine: 2 a testa, furgone 8, passarle al partner | Red Bull
+2026-11-28 | dia-18/c6 | Curiosità | Jason mette su pancia, Lucia reagisce meno | Kotaku
